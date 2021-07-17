@@ -129,7 +129,7 @@ function Footer() {
               <br />
               No.20,Appar st,Kamakodi nagar,
               <br />
-              Valasaravakkam, Chennai-87
+              Valasaravakkam, Chenevi-87
               <br />
             </p>
           </li>
