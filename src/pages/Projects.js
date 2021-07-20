@@ -2,9 +2,6 @@ import React from "react";
 import image1 from "../img/img1.jpg";
 import "../css/project.css";
 import img_slum from "../img/slum.jpg";
-import pro1 from "../img/pro.png";
-import pro2 from "../img/pro2.jpg";
-import Footer from "../components/Footer";
 
 function Projects() {
   return (

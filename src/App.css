@@ -9,7 +9,7 @@
 }
 :root {
   --primary: #fca311;
-  --background: #fff;
+  --background: rgb(235, 231, 231);
   --text: #14213d;
   --black: #000000;
 }
@@ -24,10 +24,12 @@ p{
 
 }
 h1{
-  font-size: 55px
+  font-size: 55px;
+
 }
 h2{
-  font-size: 30px
+  font-size: 30px;
+;
 }
 h3{
   font-size: 20px;
@@ -41,7 +43,7 @@ button {
 
  @media (max-width: 648px) {
    h1{
-     font-size: 45px
+     font-size: 40px
    }
    h2{
      font-size: 25px;

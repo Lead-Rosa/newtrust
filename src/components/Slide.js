@@ -12,7 +12,7 @@ import image5 from "../img/img5.jpg";
 export default class Slide extends Component {
   render() {
     const settings = {
-      dots: true,
+      // dots: true,
       className:'slide',
       autoplay: true,
       infinite: true,

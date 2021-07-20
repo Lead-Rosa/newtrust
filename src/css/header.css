@@ -8,16 +8,16 @@ a {
   text-transform: uppercase;
 }
 .navbar {
-  background-color:transparent  ;
+  background-color:transparent;
   float: top;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-evenly;
   padding: 10px 0 10px 20px;
 }
 .logo {
   display: flex;
   align-items: center;
-  
+  border: none;
   color: var(--primary);
 }
 
@@ -34,10 +34,12 @@ a {
 
 .list a {
   color: var(--primary);
+  padding: .7rem 0;
 }
 
 .list > a:hover {
-  color: #e5e5e5;
+  color: var(--black);
+  border-bottom: 2px solid var(--primary);
 }
 
 .sign-up {

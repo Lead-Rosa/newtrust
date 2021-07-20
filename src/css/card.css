@@ -96,7 +96,7 @@
 .post-module .post-content {
   position: absolute;
   bottom: 0;
-  background: #fff;
+  background: var(--background);
   width: 100%;
   padding: 20px;
   -webkti-box-sizing: border-box;

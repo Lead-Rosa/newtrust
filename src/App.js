@@ -22,7 +22,7 @@ function App() {
         <Route path="/Contact" component={Contact} />
        < Route path="/Map" component={MapContainer} />
       </Switch>
-      {/* <Footer /> */}
+      <Footer />
     </Router>
 
   );

@@ -1,8 +1,6 @@
 
 import React from "react";
 import { Map, Marker, GoogleApiWrapper } from "google-maps-react";
-import Header from "./Header";
-import Footer from "./Footer";
 
 function MapContainer(props) {
   const mapStyles = {

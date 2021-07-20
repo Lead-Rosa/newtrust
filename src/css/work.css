@@ -18,6 +18,9 @@ p {
   left: 0;
   width: 100%;
   color: var(--background);
+  opacity: 0.8;
+  padding: 1rem 2rem;
+  background-color: rgba(0, 0, 0, 0.212);
   white-space: wrap;
   padding: 0 25px;
 }
@@ -113,7 +116,7 @@ p {
 
 .text {
   display: inline-block;
-  color: #fff;
+  color: rgb(255, 255, 255);
   position: relative;
   left: 165px;
   top: -215px;
@@ -170,13 +173,13 @@ p {
   .text-main {
     display: inline-block;
     position: relative;
-    left: 170px;
-    top: -90px;
+    left: 155px;
+    top: -80px;
   }
   .text {
     display: inline-block;
     position: relative;
-    left: 170px;
-    top: -90px;
+    left: 155px;
+    top: -80px;
   }
 }

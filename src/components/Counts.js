@@ -1,71 +1,75 @@
 import React from "react";
 import "../css/count.css";
+import img from '../img/project.png';
+import img1 from '../img/donation.png';
+import img2 from '../img/donate.png';
+import img3 from '../img/marker.png';
 
 function Counts() {
   return (
     <div className="count-main-container">
-      <h1 className="main-heading"> Count</h1>
+      <h1 className="main-heading">Reach</h1>
       <ul className="count-container">
         <li className="count-box">
           <div className="number-div">
-            <div className="content">
-              <h2 className="count-number">454</h2>
-            </div>
+            {/* <div className="content"> */}
+              <img src={img} className='count-img'/>
+            {/* </div> */}
             <div className="para-div">
-              <h3 className="count-para">Projects</h3>
+              <h3 className="count-para"> 99 Projects</h3>
             </div>
           </div>
         </li>
         <li className="count-box">
           <div className="number-div">
-            <div className="content">
-              <h2 className="count-number">33</h2>
-            </div>
+
+            <img src={img1} className='count-img'/>
+        
             <div className="para-div">
-              <h3 className="count-para">Volunteers</h3>
+              <h3 className="count-para">152 Volunteers</h3>
             </div>
           </div>
         </li>
         <li className="count-box">
           <div className="number-div">
-            <div className="content">
-              <h2 className="count-number">454</h2>
-            </div>
+        
+            <img src={img2} className='count-img'/>
+         
             <div className="para-div">
-              <h3 className="count-para">Donated Person</h3>
+              <h3 className="count-para">5555 Donees</h3>
             </div>
           </div>
         </li>
         <li className="count-box">
           <div className="number-div">
-            <div className="content">
-              <h2 className="count-number">45454</h2>
-            </div>
+   
+          <img src={img3} className='count-img'/>
+            
             <div className="para-div">
-              <h3 className="count-para">Regions</h3>
+              <h3 className="count-para">3 Regions</h3>
             </div>
           </div>
         </li>
         <li className="count-box">
           <div className="number-div">
-            <div className="content">
-              <h2 className="count-number">45454</h2>
-            </div>
+
+          <img src={img1} className='count-img'/>
+      
             <div className="para-div">
-              <h3 className="count-para">Rally</h3>
+              <h3 className="count-para">Mentors</h3>
             </div>
           </div>
         </li>
-        <li className="count-box">
+        {/* <li className="count-box">
           <div className="number-div">
-            <div className="content">
-              <h2 className="count-number">45454</h2>
-            </div>
+         
+          <img src={img1} className='count-img'/>
+       
             <div className="para-div">
               <h3 className="count-para">Project</h3>
             </div>
           </div>
-        </li>
+        </li> */}
       </ul>
     </div>
   );
