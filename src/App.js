@@ -9,7 +9,7 @@ import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Projects from "./pages/Projects";
 import Footer from "./components/Footer";
 import MapContainer from './components/MapContainer'
-import Main from "./components/Main";
+import ScrollTop from "./components/ScrollTop";
 function App() {
   return (
     <Router>
@@ -22,6 +22,7 @@ function App() {
         <Route path="/Contact" component={Contact} />
        < Route path="/Map" component={MapContainer} />
       </Switch>
+      <ScrollTop />
       <Footer />
     </Router>
 

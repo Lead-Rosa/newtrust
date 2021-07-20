@@ -107,7 +107,8 @@ function Footer() {
             </div>
           </li>
           <li>
-            <a href="">
+            <h4 className='follow-h2'>Follow on</h4>
+            <a href=""> 
               <FaFacebook id="fb"  className="share-icon" size="32px" />
             </a>
             <a href="">

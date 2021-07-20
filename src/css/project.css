@@ -4,7 +4,7 @@
     align-items: center;
     text-align: justify;
     padding: 20px 20px;
-    border-bottom: 2px solid #14213d3d ;
+    border-bottom: 2px solid #14213d0e ;
     max-width: 75%;
 }   
 
@@ -27,7 +27,7 @@
   .project-heading{
       text-align: center;
       color: var(--primary);
-      padding: 15px;
+      padding: 0 0  20px 0;
   }
   @media (max-width: 648px){
      .content-container{

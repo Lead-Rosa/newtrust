@@ -13,6 +13,7 @@ a {
   display: flex;
   justify-content: space-evenly;
   padding: 10px 0 10px 20px;
+  box-shadow: 1px 1px 7px rgba(0, 0, 0, 0.308);
 }
 .logo {
   display: flex;

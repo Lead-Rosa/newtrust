@@ -13,7 +13,38 @@ function Projects() {
         <div className="content-container">
           <img src={img_slum} className="cont-img" alt="" />
           <div className="second-container">
-            <h1 className="project-heading">Title title Title</h1>
+            <h2 className="project-heading">Project Title </h2>
+
+            <p className="cont-p">
+              Lorem Ipsum is simply dummy text of the printing and typesetting
+              industry Lorem Ipsum has content of a page when looking at its
+              layout. The point of using Lorem Ipsum is that it has a
+              more-or-less normal distribution of letmany web sites still in
+              their infancy. Various versibeen the industry's standard dummy
+              text ever since the 1500s
+            </p>
+          </div>
+        </div>
+        <div className="content-container">
+         
+          <div className="second-container">
+            <h2 className="project-heading">Project Title </h2>
+
+            <p className="cont-p">
+              Lorem Ipsum is simply dummy text of the printing and typesetting
+              industry Lorem Ipsum has content of a page when looking at its
+              layout. The point of using Lorem Ipsum is that it has a
+              more-or-less normal distribution of letmany web sites still in
+              their infancy. Various versibeen the industry's standard dummy
+              text ever since the 1500s
+            </p>
+          </div>
+          <img src={img_slum} className="cont-img" alt="" />
+        </div>
+        <div className="content-container">
+          <img src={img_slum} className="cont-img" alt="" />
+          <div className="second-container">
+            <h2 className="project-heading">Project Title </h2>
 
             <p className="cont-p">
               Lorem Ipsum is simply dummy text of the printing and typesetting

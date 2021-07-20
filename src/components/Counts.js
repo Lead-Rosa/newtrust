@@ -1,9 +1,10 @@
 import React from "react";
 import "../css/count.css";
 import img from '../img/project.png';
-import img1 from '../img/donation.png';
+import img1 from '../img/volunteer.png';
 import img2 from '../img/donate.png';
 import img3 from '../img/marker.png';
+import img4 from '../img/teacher.png';
 
 function Counts() {
   return (
@@ -53,14 +54,14 @@ function Counts() {
         <li className="count-box">
           <div className="number-div">
 
-          <img src={img1} className='count-img'/>
+          <img src={img4} className='count-img'/>
       
             <div className="para-div">
               <h3 className="count-para">Mentors</h3>
             </div>
           </div>
         </li>
-        {/* <li className="count-box">
+        <li className="count-box">
           <div className="number-div">
          
           <img src={img1} className='count-img'/>
@@ -69,7 +70,7 @@ function Counts() {
               <h3 className="count-para">Project</h3>
             </div>
           </div>
-        </li> */}
+        </li>
       </ul>
     </div>
   );

@@ -68,11 +68,11 @@ export default class Cards extends Component {
                   New York, the largest city in the U.S., is an architectural
                   marvel with plenty of historic monuments.
                 </p>
-                <div className="sub-main">
+                {/* <div className="sub-main">
                   <button className="button-two">
                     <span>Hover Me</span>
                   </button>
-                </div>
+                </div> */}
               </div>
             </div>
           </div>
@@ -91,11 +91,11 @@ export default class Cards extends Component {
                   New York, the largest city in the U.S., is an architectural
                   marvel with plenty of historic monuments,
                 </p>
-                <div className="sub-main">
+                {/* <div className="sub-main">
                   <button className="button-two">
                     <span>Hover Me</span>
                   </button>
-                </div>
+                </div> */}
               </div>
             </div>
           </div>
@@ -114,11 +114,11 @@ export default class Cards extends Component {
                   New York, the largest city in the U.S., is an architectural
                   marvel with plenty of historic monuments,
                 </p>
-                <div className="sub-main">
+                {/* <div className="sub-main">
                   <button className="button-two">
                     <span>Hover Me</span>
                   </button>
-                </div>
+                </div> */}
               </div>
             </div>
           </div>
@@ -137,11 +137,11 @@ export default class Cards extends Component {
                   New York, the largest city in the U.S., is an architectural
                   marvel with plenty of historic monuments,
                 </p>
-                <div className="sub-main">
+                {/* <div className="sub-main">
                   <button className="button-two">
                     <span>Hover Me</span>
                   </button>
-                </div>
+                </div> */}
               </div>
             </div>
           </div>
@@ -160,11 +160,11 @@ export default class Cards extends Component {
                   New York, the largest city in the U.S., is an architectural
                   marvel with plenty of historic monuments,
                 </p>
-                <div className="sub-main">
+                {/* <div className="sub-main">
                   <button className="button-two">
                     <span>Hover Me</span>
                   </button>
-                </div>
+                </div> */}
               </div>
             </div>
           </div>
@@ -183,11 +183,11 @@ export default class Cards extends Component {
                   New York, the largest city in the U.S., is an architectural
                   marvel with plenty of historic monuments,
                 </p>
-                <div className="sub-main">
+                {/* <div className="sub-main">
                   <button className="button-two">
                     <span>Hover Me</span>
                   </button>
-                </div>
+                </div> */}
               </div>
             </div>
           </div>
@@ -206,11 +206,11 @@ export default class Cards extends Component {
                   New York, the largest city in the U.S., is an architectural
                   marvel with plenty of historic monuments,
                 </p>
-                <div className="sub-main">
+                {/* <div className="sub-main">
                   <button className="button-two">
                     <span>Hover Me</span>
                   </button>
-                </div>
+                </div> */}
               </div>
             </div>
           </div>
@@ -229,11 +229,11 @@ export default class Cards extends Component {
                   New York, the largest city in the U.S., is an architectural
                   marvel with plenty of historic monuments,
                 </p>
-                <div className="sub-main">
+                {/* <div className="sub-main">
                   <button className="button-two">
                     <span>Hover Me</span>
                   </button>
-                </div>
+                </div> */}
               </div>
             </div>
           </div>
@@ -252,11 +252,11 @@ export default class Cards extends Component {
                   New York, the largest city in the U.S., is an architectural
                   marvel with plenty of historic monuments,
                 </p>
-                <div className="sub-main">
+                {/* <div className="sub-main">
                   <button className="button-two">
                     <span>Hover Me</span>
                   </button>
-                </div>
+                </div> */}
               </div>
             </div>
           </div>
@@ -275,11 +275,11 @@ export default class Cards extends Component {
                   New York, the largest city in the U.S., is an architectural
                   marvel with plenty of historic monuments,
                 </p>
-                <div className="sub-main">
+                {/* <div className="sub-main">
                   <button className="button-two">
                     <span>Hover Me</span>
                   </button>
-                </div>
+                </div> */}
               </div>
             </div>
           </div>
@@ -298,11 +298,11 @@ export default class Cards extends Component {
                   New York, the largest city in the U.S., is an architectural
                   marvel with plenty of historic monuments,
                 </p>
-                <div className="sub-main">
+                {/* <div className="sub-main">
                   <button className="button-two">
                     <span>Hover Me</span>
                   </button>
-                </div>
+                </div> */}
               </div>
             </div>
           </div>

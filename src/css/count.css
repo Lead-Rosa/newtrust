@@ -1,8 +1,11 @@
+.count-main-container{
+  margin:auto;
+}
 .count-container {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  grid-gap: 20px;
-  margin: 20px auto;
+
+  margin:  auto;
   margin-bottom: 0;
   justify-content: center;
   width: 50%;
@@ -16,7 +19,7 @@
   margin: 30px;
   padding: 10px 0;
 }
-.count-img{
+.count-img {
   width: 4rem;
 }
 .number-div {
@@ -39,5 +42,6 @@
   }
   .count-box {
     min-width: 130px;
+    margin: 10px;
   }
 }
