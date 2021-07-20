@@ -29,7 +29,7 @@ function Footer() {
                   <a href="">project red</a>
                 </li>
                 <li className="footer-list-items">
-                  <a href="">project sky</a>
+                  <a href="">Project sky</a>
                 </li>
                 <li className="footer-list-items">
                   <a href="">Divine</a>
