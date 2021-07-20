@@ -13,7 +13,7 @@ function Work() {
         <h2 className="work-title">
           Lorem Ipsum is simply dummy text of the printing and typesetting
           industry Lorem Ipsum has been the industry's <br />
-          standard dummy text ever since the 1500s`
+          standard dummy text ever since the `
         </h2>
         {/* Work 1 */}
         <div className="title-content">
