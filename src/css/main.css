@@ -35,7 +35,7 @@
   color: var(--text);
 }
 .main-ceo-tag {
-  color: var(--black);
+  color: var(--primary);
 }
 .main-sec-div{
   margin: auto  ;
@@ -60,7 +60,7 @@
 }
 .main-heading {
   color: var(--text);
-  padding: 5rem 0 2rem 0 ;
+  padding: 2rem 0 2rem 0 ;
   text-align: center;
 }
 .main-h2 {

@@ -1,7 +1,6 @@
 .main-card-container {
   margin: 20px;
   align-items: center;
-  /* border-bottom: 2px solid #14213d23; */
 }
 .card-slide {
   margin: 30px auto;
@@ -13,7 +12,6 @@
   position: relative;
   z-index: 1;
   display: block;
-  /* background: var(--black); */
   max-width: 270px;
   margin: auto;
   height: 400px;
@@ -49,18 +47,17 @@
 .post-module .thumbnail .date {
   position: absolute;
   line-height: 0;
-
   top: 0px;
   right: 0px;
   z-index: 1;
   background: var(--primary);
   width: 50px;
-  height: 50px;
-  padding: 8px 7px;
+  height: 35px;
+  padding: 3px 0 3px 10px;
   -webkit-border-radius: 100%;
   -moz-border-radius: 100%;
-  border-radius: 100%;
-  color: var(--text);
+  border-radius: 2rem  0 0 2rem;
+  color: var(--text );
   font-weight: 700;
   text-align: center;
   -webkti-box-sizing: border-box;
@@ -99,13 +96,14 @@
   left: 0;
   background: var(--text);
   padding: 8px 15px;
-  color: var(--primary);
+  color: var(--black);
   border-radius:  0 35px 35px 0 ;
   text-transform: uppercase;
 }
 .post-module .post-content .title {
   margin: 0;
   padding: 0 0 10px;
+  color: var(--primary);
 }
 
 

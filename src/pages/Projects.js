@@ -6,10 +6,11 @@ import img_slum from "../img/slum.jpg";
 function Projects() {
   return (
     <div className="about-main-div">
+
       <img className="work-image" src={image1} alt="" />
       <div className="div-main-container">
 
-
+      <h1 className='project-head'>Future Projects</h1>
         <div className="content-container">
           <img src={img_slum} className="cont-img" alt="" />
           <div className="second-container">

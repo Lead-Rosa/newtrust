@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { Fade } from "react-awesome-reveal";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -53,190 +54,182 @@ export default class Cards extends Component {
       <div className="main-card-container">
         <h1 className="main-heading">Whats today</h1>
         <Slider {...settings}>
-          <div className="column">
-            <div className="post-module">
-              <div className="thumbnail">
-                <div className="date">
-                  <p className="day">New</p>
+          <Fade direction="left">
+            <div className="column">
+              <div className="post-module">
+                <div className="thumbnail">
+                  <div className="date">
+                    <p className="day">New</p>
+                  </div>
+                  <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/169963/photo-1429043794791-eb8f26f44081.jpeg" />
                 </div>
-                <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/169963/photo-1429043794791-eb8f26f44081.jpeg" />
-              </div>
-              <div className="post-content">
-                <p className="category">Food Demand</p>
-                <h2 className="title">City Lights in New York</h2>
-                     <p>
-                  New York, the largest city in the U.S., is an architectural
-                  marvel with plenty of historic monuments.
-                </p>
-                {/* <div className="sub-main">
+                <div className="post-content">
+                  <p className="category">Food Demand</p>
+                  <h2 className="title">City Lights in New York</h2>
+                  <p>
+                    New York, the largest city in the U.S., is an architectural
+                    marvel with plenty of historic monuments.
+                  </p>
+                  {/* <div className="sub-main">
                   <button className="button-two">
                     <span>Hover Me</span>
                   </button>
                 </div> */}
+                </div>
               </div>
             </div>
-          </div>
-          <div className="column">
-            <div className="post-module">
-              <div className="thumbnail">
-                <div className="date">
-                  <div className="day">New</div>
+          </Fade>
+          <Fade direction="left">
+            <div className="column">
+              <div className="post-module">
+                <div className="thumbnail">
+                  <div className="date">
+                    <div className="day">New</div>
+                  </div>
+                  <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/169963/photo-1429043794791-eb8f26f44081.jpeg" />
                 </div>
-                <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/169963/photo-1429043794791-eb8f26f44081.jpeg" />
-              </div>
-              <div className="post-content">
-                <p className="category">Food Demand</p>
-                <h2 className="title">City Lights in New York</h2>
-                     <p>
-                  New York, the largest city in the U.S., is an architectural
-                  marvel with plenty of historic monuments,
-                </p>
-                {/* <div className="sub-main">
+                <div className="post-content">
+                  <p className="category">Food Demand</p>
+                  <h2 className="title">City Lights in New York</h2>
+                  <p>
+                    New York, the largest city in the U.S., is an architectural
+                    marvel with plenty of historic monuments,
+                  </p>
+                  {/* <div className="sub-main">
                   <button className="button-two">
                     <span>Hover Me</span>
                   </button>
                 </div> */}
+                </div>
               </div>
             </div>
-          </div>
-          <div className="column">
-            <div className="post-module">
-              <div className="thumbnail">
-                <div className="date">
-                  <div className="day">New</div>
+          </Fade>
+          <Fade direction="left">
+            <div className="column">
+              <div className="post-module">
+                <div className="thumbnail">
+                  <div className="date">
+                    <div className="day">New</div>
+                  </div>
+                  <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/169963/photo-1429043794791-eb8f26f44081.jpeg" />
                 </div>
-                <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/169963/photo-1429043794791-eb8f26f44081.jpeg" />
-              </div>
-              <div className="post-content">
-                <p className="category">Food Demand</p>
-                <h2 className="title">City Lights in New York</h2>
-                     <p>
-                  New York, the largest city in the U.S., is an architectural
-                  marvel with plenty of historic monuments,
-                </p>
-                {/* <div className="sub-main">
+                <div className="post-content">
+                  <p className="category">Food Demand</p>
+                  <h2 className="title">City Lights in New York</h2>
+                  <p>
+                    New York, the largest city in the U.S., is an architectural
+                    marvel with plenty of historic monuments,
+                  </p>
+                  {/* <div className="sub-main">
                   <button className="button-two">
                     <span>Hover Me</span>
                   </button>
                 </div> */}
+                </div>
               </div>
             </div>
-          </div>
-          <div className="column">
-            <div className="post-module">
-              <div className="thumbnail">
-                <div className="date">
-                  <div className="day">New</div>
+          </Fade>
+          <Fade direction="left">
+            <div className="column">
+              <div className="post-module">
+                <div className="thumbnail">
+                  <div className="date">
+                    <div className="day">New</div>
+                  </div>
+                  <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/169963/photo-1429043794791-eb8f26f44081.jpeg" />
                 </div>
-                <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/169963/photo-1429043794791-eb8f26f44081.jpeg" />
-              </div>
-              <div className="post-content">
-                <p className="category">Food Demand</p>
-                <h2 className="title">City Lights in New York</h2>
-                     <p>
-                  New York, the largest city in the U.S., is an architectural
-                  marvel with plenty of historic monuments,
-                </p>
-                {/* <div className="sub-main">
+                <div className="post-content">
+                  <p className="category">Food Demand</p>
+                  <h2 className="title">City Lights in New York</h2>
+                  <p>
+                    New York, the largest city in the U.S., is an architectural
+                    marvel with plenty of historic monuments,
+                  </p>
+                  {/* <div className="sub-main">
                   <button className="button-two">
                     <span>Hover Me</span>
                   </button>
                 </div> */}
+                </div>
               </div>
             </div>
-          </div>
-          <div className="column">
-            <div className="post-module">
-              <div className="thumbnail">
-                <div className="date">
-                  <div className="day">New</div>
+          </Fade>
+          <Fade direction="left">
+            <div className="column">
+              <div className="post-module">
+                <div className="thumbnail">
+                  <div className="date">
+                    <div className="day">New</div>
+                  </div>
+                  <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/169963/photo-1429043794791-eb8f26f44081.jpeg" />
                 </div>
-                <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/169963/photo-1429043794791-eb8f26f44081.jpeg" />
-              </div>
-              <div className="post-content">
-                <p className="category">Food Demand</p>
-                <h2 className="title">City Lights in New York</h2>
-                     <p>
-                  New York, the largest city in the U.S., is an architectural
-                  marvel with plenty of historic monuments,
-                </p>
-                {/* <div className="sub-main">
+                <div className="post-content">
+                  <p className="category">Food Demand</p>
+                  <h2 className="title">City Lights in New York</h2>
+                  <p>
+                    New York, the largest city in the U.S., is an architectural
+                    marvel with plenty of historic monuments,
+                  </p>
+                  {/* <div className="sub-main">
                   <button className="button-two">
                     <span>Hover Me</span>
                   </button>
                 </div> */}
+                </div>
               </div>
             </div>
-          </div>
-          <div className="column">
-            <div className="post-module">
-              <div className="thumbnail">
-                <div className="date">
-                  <div className="day">New</div>
+          </Fade>
+          <Fade direction="left">
+            <div className="column">
+              <div className="post-module">
+                <div className="thumbnail">
+                  <div className="date">
+                    <div className="day">New</div>
+                  </div>
+                  <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/169963/photo-1429043794791-eb8f26f44081.jpeg" />
                 </div>
-                <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/169963/photo-1429043794791-eb8f26f44081.jpeg" />
-              </div>
-              <div className="post-content">
-                <p className="category">Food Demand</p>
-                <h2 className="title">City Lights in New York</h2>
-                     <p>
-                  New York, the largest city in the U.S., is an architectural
-                  marvel with plenty of historic monuments,
-                </p>
-                {/* <div className="sub-main">
+                <div className="post-content">
+                  <p className="category">Food Demand</p>
+                  <h2 className="title">City Lights in New York</h2>
+                  <p>
+                    New York, the largest city in the U.S., is an architectural
+                    marvel with plenty of historic monuments,
+                  </p>
+                  {/* <div className="sub-main">
                   <button className="button-two">
                     <span>Hover Me</span>
                   </button>
                 </div> */}
+                </div>
               </div>
             </div>
-          </div>
-          <div className="column">
-            <div className="post-module">
-              <div className="thumbnail">
-                <div className="date">
-                  <div className="day">New</div>
+          </Fade>
+          <Fade direction="left">
+            <div className="column">
+              <div className="post-module">
+                <div className="thumbnail">
+                  <div className="date">
+                    <div className="day">New</div>
+                  </div>
+                  <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/169963/photo-1429043794791-eb8f26f44081.jpeg" />
                 </div>
-                <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/169963/photo-1429043794791-eb8f26f44081.jpeg" />
-              </div>
-              <div className="post-content">
-                <p className="category">Food Demand</p>
-                <h2 className="title">City Lights in New York</h2>
-                     <p>
-                  New York, the largest city in the U.S., is an architectural
-                  marvel with plenty of historic monuments,
-                </p>
-                {/* <div className="sub-main">
+                <div className="post-content">
+                  <p className="category">Food Demand</p>
+                  <h2 className="title">City Lights in New York</h2>
+                  <p>
+                    New York, the largest city in the U.S., is an architectural
+                    marvel with plenty of historic monuments,
+                  </p>
+                  {/* <div className="sub-main">
                   <button className="button-two">
                     <span>Hover Me</span>
                   </button>
                 </div> */}
-              </div>
-            </div>
-          </div>
-          <div className="column">
-            <div className="post-module">
-              <div className="thumbnail">
-                <div className="date">
-                  <div className="day">New</div>
                 </div>
-                <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/169963/photo-1429043794791-eb8f26f44081.jpeg" />
-              </div>
-              <div className="post-content">
-                <p className="category">Food Demand</p>
-                <h2 className="title">City Lights in New York</h2>
-                     <p>
-                  New York, the largest city in the U.S., is an architectural
-                  marvel with plenty of historic monuments,
-                </p>
-                {/* <div className="sub-main">
-                  <button className="button-two">
-                    <span>Hover Me</span>
-                  </button>
-                </div> */}
               </div>
             </div>
-          </div>
+          </Fade>
+          <Fade direction="left">
           <div className="column">
             <div className="post-module">
               <div className="thumbnail">
@@ -248,7 +241,7 @@ export default class Cards extends Component {
               <div className="post-content">
                 <p className="category">Food Demand</p>
                 <h2 className="title">City Lights in New York</h2>
-                     <p>
+                <p>
                   New York, the largest city in the U.S., is an architectural
                   marvel with plenty of historic monuments,
                 </p>
@@ -260,6 +253,8 @@ export default class Cards extends Component {
               </div>
             </div>
           </div>
+          </Fade>
+          <Fade direction="left">
           <div className="column">
             <div className="post-module">
               <div className="thumbnail">
@@ -271,7 +266,7 @@ export default class Cards extends Component {
               <div className="post-content">
                 <p className="category">Food Demand</p>
                 <h2 className="title">City Lights in New York</h2>
-                     <p>
+                <p>
                   New York, the largest city in the U.S., is an architectural
                   marvel with plenty of historic monuments,
                 </p>
@@ -283,6 +278,8 @@ export default class Cards extends Component {
               </div>
             </div>
           </div>
+          </Fade>
+          <Fade direction="left">
           <div className="column">
             <div className="post-module">
               <div className="thumbnail">
@@ -294,7 +291,7 @@ export default class Cards extends Component {
               <div className="post-content">
                 <p className="category">Food Demand</p>
                 <h2 className="title">City Lights in New York</h2>
-                     <p>
+                <p>
                   New York, the largest city in the U.S., is an architectural
                   marvel with plenty of historic monuments,
                 </p>
@@ -306,6 +303,32 @@ export default class Cards extends Component {
               </div>
             </div>
           </div>
+          </Fade>
+          <Fade direction="left">
+          <div className="column">
+            <div className="post-module">
+              <div className="thumbnail">
+                <div className="date">
+                  <div className="day">New</div>
+                </div>
+                <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/169963/photo-1429043794791-eb8f26f44081.jpeg" />
+              </div>
+              <div className="post-content">
+                <p className="category">Food Demand</p>
+                <h2 className="title">City Lights in New York</h2>
+                <p>
+                  New York, the largest city in the U.S., is an architectural
+                  marvel with plenty of historic monuments,
+                </p>
+                {/* <div className="sub-main">
+                  <button className="button-two">
+                    <span>Hover Me</span>
+                  </button>
+                </div> */}
+              </div>
+            </div>
+          </div>
+          </Fade>
         </Slider>
       </div>
     );

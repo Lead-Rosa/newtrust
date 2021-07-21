@@ -28,7 +28,7 @@ p {
 .main-title {
   padding: 25px 0;
   text-align: left;
-  color: var(--primary);
+  color: var(--text);
 }
 .title-content {
   margin: auto;
@@ -40,7 +40,7 @@ p {
   text-indent: 2rem;
   padding-left: 10px;
   text-align: justify;
-  border-left: 2px solid var(--text);
+  border-left: 3px solid var(--text);
 }
 .content-descp {
   display: flex;
@@ -59,18 +59,12 @@ p {
   color: var(--primary);
 }
 .descp-para {
-  /* margin: auto; */
-  /* display: block; */
+
   align-items: center;
   max-width: 500px;
-  /* text-indent: 2rem; */
-  /* padding-left: 10px;
-  max-width: 500px;
-  text-align: justify; */
+
 }
-/* .desc-title{
-  text-align: right;
-} */
+
 .start-container {
   margin: auto;
 }
@@ -122,6 +116,7 @@ p {
   top: -215px;
 }
 .star-title {
+  color: var(--text);
   text-align: center;
   padding: 15px;
 }

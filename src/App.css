@@ -8,10 +8,10 @@
   
 }
 :root {
-  --primary: #fca311;
-  --background: rgb(235, 231, 231);
-  --text: #14213d;
-  --black: #000000;
+  --primary: #4abdac;
+  --background: 	#dfdce3;
+  --text: #fc4a1a	;
+  --black: 	#000;
 }
 ul {
   list-style-type: none;

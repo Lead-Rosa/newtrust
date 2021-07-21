@@ -1,4 +1,5 @@
 import React from "react";
+import { Fade } from "react-awesome-reveal";
 import "../css/count.css";
 import img from '../img/project.png';
 import img1 from '../img/volunteer.png';
@@ -9,8 +10,12 @@ import img4 from '../img/teacher.png';
 function Counts() {
   return (
     <div className="count-main-container">
+      <Fade direction='down'>
       <h1 className="main-heading">Reach</h1>
+      </Fade>
+      {/* <Fade direction='up'> */}
       <ul className="count-container">
+        <Fade direction='left'>
         <li className="count-box">
           <div className="number-div">
             {/* <div className="content"> */}
@@ -21,6 +26,8 @@ function Counts() {
             </div>
           </div>
         </li>
+        </Fade>
+        <Fade direction='down'>
         <li className="count-box">
           <div className="number-div">
 
@@ -31,6 +38,8 @@ function Counts() {
             </div>
           </div>
         </li>
+        </Fade>
+        <Fade direction='right'>
         <li className="count-box">
           <div className="number-div">
         
@@ -41,6 +50,8 @@ function Counts() {
             </div>
           </div>
         </li>
+        </Fade>
+        <Fade direction='left'>
         <li className="count-box">
           <div className="number-div">
    
@@ -51,6 +62,8 @@ function Counts() {
             </div>
           </div>
         </li>
+        </Fade>
+        <Fade direction='up'>
         <li className="count-box">
           <div className="number-div">
 
@@ -61,6 +74,8 @@ function Counts() {
             </div>
           </div>
         </li>
+        </Fade>
+        <Fade direction='right'>
         <li className="count-box">
           <div className="number-div">
          
@@ -71,7 +86,9 @@ function Counts() {
             </div>
           </div>
         </li>
+        </Fade>
       </ul>
+      {/* </Fade> */}
     </div>
   );
 }

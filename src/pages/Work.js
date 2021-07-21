@@ -10,11 +10,11 @@ function Work() {
     <div className="about-main-div">
       <img className="work-image" src={image1} alt="" />
       <div className="work-main-container">
-        <h2 className="work-title">
+        <h3 className="work-title">
           Lorem Ipsum is simply dummy text of the printing and typesetting
           industry Lorem Ipsum has been the industry's <br />
           standard dummy text ever since the `
-        </h2>
+        </h3>
         {/* Work 1 */}
         <div className="title-content">
           <h2 className="main-title">Our work Heading main</h2>

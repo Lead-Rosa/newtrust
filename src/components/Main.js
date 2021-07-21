@@ -1,4 +1,5 @@
 import React from "react";
+import { Fade } from "react-awesome-reveal";
 import img1 from "../img/pro2.jpg";
 import Slide_img_Res from "../components/Slide_img_Res";
 import "../css/about.css";
@@ -16,8 +17,12 @@ function Main() {
         </p>
       </div> */}
       <div className="ceo-div">
+       
         <div className="main-about-container">
+        <Fade direction="left">
           <img src={img1} className="main-ceo-img" alt="" />
+          </Fade>
+          <Fade direction="right">
           <div className="main-ceo-container-div">
             <h2 className="main-ceo-name">Wiberto Blanc</h2>
             <h5 className="main-ceo-tag">CEO of Org</h5>
@@ -29,12 +34,17 @@ function Main() {
               survived not only five centuries, but also the leap into
             </p>
           </div>
+          </Fade>
         </div>
+        
       </div>
       <div className="sec-div">
         <div className="main-sec-div">
+          <Fade direction="down">
           <h1 className="main-heading">Who we are</h1>
+          </Fade>
           <div className="main-container">
+          <Fade damping delay={100} >
             <div className='sec-sub-div'>
             <h2 className="main-h2-1">Our Envi</h2>
             <p className="main-p-1">
@@ -50,6 +60,8 @@ function Main() {
               including versions of Lorem Ipsum.
             </p>
             </div>
+            {/* </Fade>
+            <Fade triggerOnce direction="left" delay={300}> */}
             <div  className='sec-sub-div-2'>
             <h2 className="main-h2">Missions</h2>
             <p className="main-p">
@@ -65,6 +77,8 @@ function Main() {
               literature, discovered the undoubtable source..
             </p>
             </div>
+            {/* </Fade>
+            <Fade triggerOnce direction="left" delay={400}> */}
             <div className='sec-sub-div'>
             <h2 className="main-h2">Future</h2>
             <p className="main-p">
@@ -82,6 +96,7 @@ function Main() {
               reasonable.
             </p>
             </div>
+            </Fade>
           </div>
         </div>
       </div>

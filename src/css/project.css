@@ -11,18 +11,23 @@
 .div-main-container{
     display: flex;
     margin: auto;
-    padding: 10px 20px;
+    padding: 3rem 5rem 5rem 5rem;
     flex-direction: column;
     align-items: center;
  
 }
 .cont-img{
     padding: 0 20px ;
+    border-radius: 10%;
     object-fit: cover;
     height: max(13rem);
   }
   .cont-p{
       padding: 0 10px;
+  }
+  .project-head{
+    padding: 3rem 0 3rem 0;
+    color: var(--text);
   }
   .project-heading{
       text-align: center;

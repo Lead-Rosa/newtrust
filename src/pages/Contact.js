@@ -2,7 +2,7 @@ import React from "react";
 import { useState } from "react";
 import MapContainer from "../components/MapContainer";
 
-import { BrowserRouter as Router, Route, Switch, Link } from "react-router-dom";
+import { BrowserRouter as Router, Route,Redirect, Switch, Link } from "react-router-dom";
 import "../css/Contact.css";
 
 function Contact() {
@@ -48,7 +48,7 @@ function Contact() {
             <br />
             <span>reach@lead.org</span><br/>
             <span>
-              <Link to="/Map">Find us</Link>
+              <a href='https://goo.gl/maps/AsPdN383R2DTCxcFA' style={{textTransform:'lowercase'}}>Locate us</a>
             </span>
           </p>
         </div>
@@ -113,11 +113,11 @@ function Contact() {
           Submit
         </button>
       </form>
-      <Router>
+      {/* <Router>
         <Switch>
-          <Route path="/Map" component={MapContainer} />
+          <Redirect to="https://goo.gl/maps/AsPdN383R2DTCxcFA" />
         </Switch>
-      </Router>
+      </Router> */}
     </div>
   );
 }

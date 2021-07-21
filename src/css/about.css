@@ -5,8 +5,8 @@
 }
 
 .about-quote {
-  background-color: var(--text);
-  color: var(--primary) !important;
+  background-color: var(--primary);
+  color: var(--text) !important;
   max-width: 90rem;
   margin: 3rem auto;
   padding: 0 7rem;
@@ -18,7 +18,7 @@
   font-family: "Pacifico", cursive;
 }
 .quote-img {
-  color: var(--primary);
+  color: var(--text);
 }
 .about-main-container {
   padding-top: 2rem;
@@ -28,13 +28,13 @@
 .about-title {
   display: block;
   position: absolute;
-  background-color: rgba(43, 43, 43, 0.212);
+  background-color: rgba(43, 43, 43, 0.521);
   max-width: 700px;
-  top: 15em;
+  top: 20em;
   left: 6rem;
   padding: 1rem 2rem;
   border-radius: 10px;
-  color: var(--text);
+  color:#fff;
 }
 .about-container {
   display: flex;
