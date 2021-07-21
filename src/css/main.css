@@ -27,8 +27,8 @@
   /* background-color: bisque; */
 }
 .main-ceo-img {
-  max-width: 20vw;
-  height: 100%;
+  max-width: 100% ;
+  /* height: ; */
   border-radius: 10px;
 }
 .main-ceo-name {
