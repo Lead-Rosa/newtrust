@@ -3,10 +3,7 @@ import { useState } from 'react';
 import { GiAlmond } from "react-icons/gi";
 import { AiOutlineMenu ,AiOutlineClose } from "react-icons/ai";
 import {  Link } from 'react-router-dom';
-import Home from '../pages/Home'
-// import About from '../pages/About'
-// import Project from '../pages/Project'
-import Work from '../pages/Work'
+import img from '../img/handshake.png'
 import '../css/header.css';
 
 export default function Header() {
@@ -16,30 +13,41 @@ export default function Header() {
     const closeMenu =() =>setClick(false)
 
   return (
-      <div className='navbar'>
+    <div className='main-navbar'>
+            <div className='navbar'>
          <Link to={'/'}>
         <div className='logo'>
-       
-          <GiAlmond className='logo-icon' size='55px'/>
-          <h2>Heading</h2>
+        <img src={img} className='logo-icon'/>
+          {/* <GiAlmond className='logo-icon' size='55px'/> */}
+          <h2>Head</h2>
       
         </div>
         </Link>
         <ul className={click?'nav-list-mobile' :'nav-list'}>
         <li className='list' onClick={closeMenu}>
+          <div className='nav-list-item'>
             <Link to='/'>home</Link>
+            </div>
           </li>
           <li className='list' onClick={closeMenu}>
-            <Link to='/About'>ABOUT</Link>
+          <div className='nav-list-item'>
+            <Link to='/About'>about</Link>
+            </div>
           </li>
           <li className='list' onClick={closeMenu}>
-            <Link to='/Project'>PROJECT</Link>
+          <div className='nav-list-item'>
+            <Link to='/Project'>project</Link>
+            </div>
           </li>
           <li className='list' onClick={closeMenu}>
-            <Link to='/Work'>Our Work</Link>
+          <div className='nav-list-item'>
+            <Link to='/Work'>Work</Link>
+            </div>
           </li>
           <li className='list' onClick={closeMenu}>
-            <Link to='/Contact'>Contact Us</Link>
+          <div className='nav-list-item'>
+            <Link to='/Contact'>contact</Link>
+            </div>
           </li>
         </ul>
         <ul className='sign-up'>
@@ -58,7 +66,7 @@ export default function Header() {
           }
         </div>
       </div>
-
+</div>
   )
 }
 

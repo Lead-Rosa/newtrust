@@ -1,4 +1,5 @@
 import React from "react";
+import { Fade } from "react-awesome-reveal";
 import "../css/work.css";
 import image1 from "../img/img1.jpg";
 import img_slum from "../img/slum.jpg";
