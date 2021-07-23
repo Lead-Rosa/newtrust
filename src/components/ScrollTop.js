@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
+import classes from '../css/FoundationStyles.module.css';
 import {FaArrowCircleUp} from 'react-icons/fa';
-import '../css/scrollTop.css';
-
+// import '../css/scrollTop.css';
 
 const ScrollTop = () =>{
 
@@ -22,7 +22,7 @@ const ScrollTop = () =>{
   window.addEventListener('scroll', checkScrollTop)
 
   return (
-        <FaArrowCircleUp className="scrollTop" onClick={scrollTop} style={{height: 45, display: showScroll ? 'flex' : 'none'}}/>
+        <FaArrowCircleUp className={classes.scrollTop} onClick={scrollTop} style={{height: 45, display: showScroll ? 'flex' : 'none'}}/>
   );
 }
 

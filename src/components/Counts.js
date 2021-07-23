@@ -1,6 +1,6 @@
 import React from "react";
 import { Fade } from "react-awesome-reveal";
-import "../css/count.css";
+import classes from '../css/FoundationStyles.module.css';
 import img from '../img/project.png';
 import img1 from '../img/volunteer.png';
 import img2 from '../img/donate.png';
@@ -9,86 +9,84 @@ import img4 from '../img/teacher.png';
 
 function Counts() {
   return (
-    <div className="count-main-container">
+    <div className={classes.count_main_container}>
       <Fade direction='down'>
-      <h1 className="main-heading">Reach</h1>
+      <h1 className={classes.main_heading}>Reach</h1>
       </Fade>
-      {/* <Fade direction='up'> */}
-      <ul className="count-container">
+      <ul className={classes.count_container}>
         <Fade direction='left'>
-        <li className="count-box">
-          <div className="number-div">
-            {/* <div className="content"> */}
-              <img src={img} className='count-img'/>
-            {/* </div> */}
-            <div className="para-div">
-              <h3 className="count-para"> 99 Projects</h3>
+        <li className={classes.count_box}>
+          <div className={classes.number_div}>
+    
+              <img src={img} alt='' className={classes.count_img}/>
+      
+            <div className={classes.para_div}>
+              <h3 className={classes.count_para}> 99 Projects</h3>
             </div>
           </div>
         </li>
         </Fade>
         <Fade direction='down'>
-        <li className="count-box">
-          <div className="number-div">
+        <li className={classes.count_box}>
+          <div className={classes.number_div}>
 
-            <img src={img1} className='count-img'/>
+            <img src={img1} alt='' className={classes.count_img}/>
         
-            <div className="para-div">
-              <h3 className="count-para">152 Volunteers</h3>
+            <div className={classes.para_div}>
+              <h3 className={classes.count_para}>152 Volunteers</h3>
             </div>
           </div>
         </li>
         </Fade>
         <Fade direction='right'>
-        <li className="count-box">
-          <div className="number-div">
+        <li className={classes.count_box}>
+          <div className={classes.number_div}>
         
-            <img src={img2} className='count-img'/>
+            <img src={img2} alt='' className={classes.count_img}/>
          
-            <div className="para-div">
-              <h3 className="count-para">5555 Donees</h3>
+            <div className={classes.para_div}>
+              <h3 className={classes.count_para}>5555 Donees</h3>
             </div>
           </div>
         </li>
         </Fade>
         <Fade direction='left'>
-        <li className="count-box">
-          <div className="number-div">
+        <li className={classes.count_box}>
+          <div className={classes.number_div}>
    
-          <img src={img3} className='count-img'/>
+          <img src={img3} alt='' className={classes.count_img}/>
             
-            <div className="para-div">
-              <h3 className="count-para">3 Regions</h3>
+            <div className={classes.para_div}>
+              <h3 className={classes.count_para}>3 Regions</h3>
             </div>
           </div>
         </li>
         </Fade>
         <Fade direction='up'>
-        <li className="count-box">
-          <div className="number-div">
+        <li className={classes.count_box}>
+          <div className={classes.number_div}>
 
-          <img src={img4} className='count-img'/>
+          <img src={img4} alt='' className={classes.count_img}/>
       
-            <div className="para-div">
-              <h3 className="count-para">Mentors</h3>
+            <div className={classes.para_div}>
+              <h3 className={classes.count_para}>Mentors</h3>
             </div>
           </div>
         </li>
         </Fade>
         <Fade direction='right'>
-        <li className="count-box">
-          <div className="number-div">
+        <li className={classes.count_box}>
+          <div className={classes.number_div}>
          
-          <img src={img1} className='count-img'/>
+          <img src={img1} alt='' className={classes.count_img}/>
        
-            <div className="para-div">
-              <h3 className="count-para">Project</h3>
+            <div className={classes.para_div}>
+              <h3 className={classes.count_para}>Project</h3>
             </div>
           </div>
         </li>
         </Fade>
       </ul>
-      {/* </Fade> */}
     </div>
   );
 }

@@ -1,10 +1,10 @@
 import React from 'react'
 import { useState } from 'react';
-import { GiAlmond } from "react-icons/gi";
+import classes from '../css/FoundationStyles.module.css';
 import { AiOutlineMenu ,AiOutlineClose } from "react-icons/ai";
 import {  Link } from 'react-router-dom';
 import img from '../img/handshake.png'
-import '../css/header.css';
+
 
 export default function Header() {
 
@@ -13,56 +13,55 @@ export default function Header() {
     const closeMenu =() =>setClick(false)
 
   return (
-    <div className='main-navbar'>
-            <div className='navbar'>
+    <div className={classes.main_navbar}>
+            <div className={classes.navbar}>
          <Link to={'/'}>
-        <div className='logo'>
-        <img src={img} className='logo-icon'/>
-          {/* <GiAlmond className='logo-icon' size='55px'/> */}
+        <div className={classes.logo}>
+        <img src={img} className={classes.logo_icon} alt=''/>
           <h2>Head</h2>
       
         </div>
         </Link>
-        <ul className={click?'nav-list-mobile' :'nav-list'}>
-        <li className='list' onClick={closeMenu}>
-          <div className='nav-list-item'>
+        <ul className={click ? classes.nav_list_mobile : classes.nav_list }>
+        <li className={classes.list} onClick={closeMenu}>
+          <div className={classes.nav_list_item}>
             <Link to='/'>home</Link>
             </div>
           </li>
-          <li className='list' onClick={closeMenu}>
-          <div className='nav-list-item'>
+          <li className={classes.list} onClick={closeMenu}>
+          <div className={classes.nav_list_item}>
             <Link to='/About'>about</Link>
             </div>
           </li>
-          <li className='list' onClick={closeMenu}>
-          <div className='nav-list-item'>
+          <li className={classes.list} onClick={closeMenu}>
+          <div className={classes.nav_list_item}>
             <Link to='/Project'>project</Link>
             </div>
           </li>
-          <li className='list' onClick={closeMenu}>
-          <div className='nav-list-item'>
+          <li className={classes.list} onClick={closeMenu}>
+          <div className={classes.nav_list_item}>
             <Link to='/Work'>Work</Link>
             </div>
           </li>
-          <li className='list' onClick={closeMenu}>
-          <div className='nav-list-item'>
+          <li className={classes.list} onClick={closeMenu}>
+          <div className={classes.nav_list_item}>
             <Link to='/Contact'>contact</Link>
             </div>
           </li>
         </ul>
-        <ul className='sign-up'>
-          <li className='sign'>
+        <ul className={classes.sign_up}>
+          <li className={classes.sign}>
             <a href='#'>Sign-UP</a>
             </li>
-          <li className='sign'>
+          <li className={classes.sign}>
             <a href='#'>Donate</a>
           </li>
         </ul>
-        <div className='menu-icon' onClick={clickHandler}>
+        <div className={classes.menu_icon} onClick={clickHandler}>
           {click?
-          (<AiOutlineClose className='menu' size='40px'/>)
+          (<AiOutlineClose className={classes.menu} size='40px'/>)
           :
-          (<AiOutlineMenu className='menu'size='40px'/>)
+          (<AiOutlineMenu className={classes.menu} size='40px'/>)
           }
         </div>
       </div>

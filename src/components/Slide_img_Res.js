@@ -1,6 +1,6 @@
 import React from 'react'
 import Slide from "./Slide";
-import "../css/main.css";
+import classes from '../css/FoundationStyles.module.css';
 import img1 from '../img/img1.jpg'
 
 function Slide_img_Res() {
@@ -20,7 +20,7 @@ function Slide_img_Res() {
             const { width } = useViewport();
             const breakpoint = 620;
           
-            return width < breakpoint ? <img src={img1} className='img-main' alt=''/> :<Slide className="slide"/>;
+            return width < breakpoint ? <img src={img1} className={classes.img_main} alt=''/> :<Slide className="slide"/>;
           }
     return (
         <MyComponent/>

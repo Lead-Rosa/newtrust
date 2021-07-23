@@ -10,6 +10,7 @@ import Projects from "./pages/Projects";
 import Footer from "./components/Footer";
 import MapContainer from './components/MapContainer'
 import ScrollTop from "./components/ScrollTop";
+
 function App() {
   return (
     <Router>

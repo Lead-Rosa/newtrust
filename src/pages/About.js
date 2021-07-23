@@ -1,18 +1,22 @@
 import React from "react";
+import { useEffect } from "react";
+import classes from '../css/FoundationStyles.module.css';
 import { Fade } from "react-awesome-reveal";
 import image1 from "../img/img1.jpg";
 import img1 from "../img/pro2.jpg";
 import img2 from "../img/05.jpg";
 import { ImQuotesLeft } from "react-icons/im";
-import "../css/about.css";
+
 
 function About() {
+
+    useEffect(()=> window.scrollTo(0,0),[]);
   return (
     <div>
-      <div className='about-main-div'>
-      <img src={image1} className="about-image" />
+      <div className={classes.about_main_div}>
+      <img src={image1} alt='' className={classes.about_image} />
         
-      <div className="about-title">
+      <div className={classes.about_title}>
       <Fade direction='right'>
         <h2>About title</h2>
         <p>
@@ -24,30 +28,30 @@ function About() {
       </div>
   
     </div>
-      <div className='about-quote'>
+      <div className={classes.about_quote}>
         <Fade triggerOnce direction='left'>
-          <h2><ImQuotesLeft className='quote-img' size='5rem'/>About it to make a type s not only five
+          <h2><ImQuotesLeft className={classes.quote_img} size='5rem'/>About it to make a type s not only five
           centuries, but also the
           essentially unchanged.</h2>
           </Fade>
         </div>
-      <div className="ceo-container">
+      <div className={classes.ceo_container}>
         
-        <div className="about-container">
+        <div className={classes.about_container}>
         
-          <div  className="ceo-img">
+          <div  className={classes.ceo_img}>
               <Fade direction='left'>
           <img
             src={img1}
-            className="ceo-img"
+            className={classes.ceo_img}
             alt=""
           />
                  </Fade>
           </div>
    <Fade direction='right'>
-          <div className='ceo-container-div'>
-            <h2 className="ceo-name">Name name</h2>
-            <h5 className="ceo-tag">CEO of Org</h5>
+          <div className={classes.ceo_container_div}>
+            <h2 className={classes.ceo_name}>Name name</h2>
+            <h5 className={classes.ceo_tag}>CEO of Org</h5>
             <p>
               Lorem Ipsum is simply dummy text of the printing and typesetting
               industry. Lorem Ipsum has been the industry's standard dummy text
@@ -76,25 +80,25 @@ function About() {
           </Fade>
         </div>
         <Fade triggerOnce direction='down'>
-        <div className="sec-container">
-          <div className="what-div">
-            <h2 className="what-title">What we do</h2>
-            <p className="what-para">
+        <div className={classes.sec_container}>
+          <div className={classes.what_div}>
+            <h2 className={classes.what_title}>What we do</h2>
+            <p className={classes.what_para}>
               <strong>Investigate:- </strong>including versions of Lorem Ipsum
               Contrary to popular belief, Lorem Ipsum is not simply random text.
               It has roots
             </p>
-            <p className="what-para">
+            <p className={classes.what_para}>
               <strong>Expose: </strong> Expose the situation including versions
               of Lorem Ipsum Contrary to popular belief, Lorem Ipsum is not
               simply random text. It has roots
             </p>
-            <p className="what-para">
+            <p className={classes.what_para}>
               <strong>Make Change: </strong>including versions of Lorem Ipsum
               Contrary to popular belief, Lorem Ipsum is not simply random text.
               It has roots
             </p>
-            <p className="what-para">
+            <p className={classes.what_para}>
               <strong>Maintain: </strong>including versions of Lorem Ipsum
               Contrary to popular belief, Lorem Ipsum is not simply random text.
               It has roots
@@ -103,55 +107,57 @@ function About() {
         </div>
         </Fade>
         </div>
-        <div className='main-staff-div'>
-          <h1 className='staff-title'>Staffs</h1>
-          <div className="staff-container">
-            <div className='staff-div'>
-              <img src={img2} className="staff-img" alt="" />
-              <div className="staff-detail">
-                <h3 className="staff-name">Name name</h3>
-                <p className="staff-desig">Designation</p>
+        <div className={classes.main_staff_div}>
+          <h1 className={classes.staff_title}>Staffs</h1>
+          <div className={classes.staff_container}>
+            <div className={classes.staff_div}>
+              <img src={img2} className={classes.staff_img} alt="" />
+              <div className={classes.staff_detail}>
+                <h3 className={classes.staff_name}>Name name</h3>
+                <p className={classes.staff_desig}>Designation</p>
               </div>
             </div>
-            <div className='staff-div'>
-              <img src={img2} className="staff-img" alt="" /> 
-              <div className="staff-detail">
-                <h3 className="staff-name">Name name</h3>
-                <p className="staff-desig">Designation</p>
+            <div className={classes.staff_div}>
+              <img src={img2} className={classes.staff_img} alt="" /> 
+              <div className={classes.staff_detail}>
+                <h3 className={classes.staff_name}>Name name</h3>
+                <p className={classes.staff_desig}>Designation</p>
               </div>
             </div>
-            <div className='staff-div'>
-              <img src={img2} className="staff-img" alt="" />
-              <div className="staff-detail">
-                <h3 className="staff-name">Name name</h3>
-                <p className="staff-desig">Designation</p>
+            <div className={classes.staff_div}>
+              <img src={img2} className={classes.staff_img} alt="" />
+              <div className={classes.staff_detail}>
+                <h3 className={classes.staff_name}>Name name</h3>
+                <p className={classes.staff_desig}>Designation</p>
               </div>
             </div>
-            <div className='staff-div'>
-              <img src={img2} className="staff-img" alt="" />
-              <div className="staff-detail">
-                <h3 className="staff-name">Name name</h3>
-                <p className="staff-desig">Designation</p>
+            <div className={classes.staff_div}>
+              <img src={img2} className={classes.staff_img} alt="" />
+              <div className={classes.staff_detail}>
+                <h3 className={classes.staff_name}>Name name</h3>
+                <p className={classes.staff_desig}>Designation</p>
               </div>
             </div>
-            <div className='staff-div'>
-              <img src={img2} className="staff-img" alt="" />
-              <div className="staff-detail">
-                <h3 className="staff-name">Name name</h3>
-                <p className="staff-desig">Designation</p>
+            <div className={classes.staff_div}>
+              <img src={img2} className={classes.staff_img} alt="" />
+              <div className={classes.staff_detail}>
+                <h3 className={classes.staff_name}>Name name</h3>
+                <p className={classes.staff_desig}>Designation</p>
               </div>
             </div>
-            <div className='staff-div'>
-              <img src={img2} className="staff-img" alt="" />
-              <div className="staff-detail">
-                <h3 className="staff-name">Name name</h3>
-                <p className="staff-desig">Designation</p>
+            <div className={classes.staff_div}>
+              <img src={img2} className={classes.staff_img} alt="" />
+              <div className={classes.staff_detail}>
+                <h3 className={classes.staff_name}>Name name</h3>
+                <p className={classes.staff_desig}>Designation</p>
               </div>
             </div>
             
 
           </div>
         </div>
+
+  
     </div>
   );
 }

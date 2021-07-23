@@ -1,20 +1,119 @@
 import React, { Component } from "react";
 import { Fade } from "react-awesome-reveal";
 import Slider from "react-slick";
+import classes from "../css/FoundationStyles.module.css";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-// import '../css/slid2.css';
-import "../css/card.css";
-import image from "../img/image1.jpg";
 
-export default class Cards extends Component {
+export class Cards extends Component {
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      card: [
+        {
+          id: 1,
+          img: "https://s3-us-west-2.amazonaws.com/s.cdpn.io/169963/photo-1429043794791-eb8f26f44081.jpeg",
+          cardTitle: "Food demand",
+          cardHeading: "City Lights in New York",
+          description:
+            " New York, the largest city in the U.S., is an architectural marvel with plenty of historic monuments.",
+        },
+        {
+          id: 2,
+          img: "https://s3-us-west-2.amazonaws.com/s.cdpn.io/169963/photo-1429043794791-eb8f26f44081.jpeg",
+          cardTitle: "cloths demand",
+          cardHeading: " in New York",
+          description:
+            " New York, the largest city in the U.S., is an architecy text ever since the 1500s, when an unknown printe  took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, butural marvel with plenty of historic monuments.",
+        },
+        {
+          id: 3,
+          img: "https://s3-us-west-2.amazonaws.com/s.cdpn.io/169963/photo-1429043794791-eb8f26f44081.jpeg",
+          cardTitle: "Food demand",
+          cardHeading: "City Lights in New York",
+          description:
+            " New York, the largest city in the U.S., is an architectural marvel with plenty of historic monuments.",
+        },
+        {
+          id: 4,
+          img: "https://s3-us-west-2.amazonaws.com/s.cdpn.io/169963/photo-1429043794791-eb8f26f44081.jpeg",
+          cardTitle: "Food demand",
+          cardHeading: "City Lights in New York",
+          description:
+            " New York, the largest city in the U.S., is an architectural marvel with plenty of historic monuments.",
+        },
+        {
+          id: 5,
+          img: "https://s3-us-west-2.amazonaws.com/s.cdpn.io/169963/photo-1429043794791-eb8f26f44081.jpeg",
+          cardTitle: "Food demand",
+          cardHeading: "City Lights in New York",
+          description:
+            " New York, the largest city in the U.S., is an architectural marvel with plenty of historic monuments.",
+        },
+        {
+          id: 6,
+          img: "https://s3-us-west-2.amazonaws.com/s.cdpn.io/169963/photo-1429043794791-eb8f26f44081.jpeg",
+          cardTitle: "Food demand",
+          cardHeading: "City Lights in New York",
+          description:
+            " New York, the largest city in the U.S., is an architectural marvel with plenty of historic monuments.",
+        },
+        {
+          id: 7,
+          img: "https://s3-us-west-2.amazonaws.com/s.cdpn.io/169963/photo-1429043794791-eb8f26f44081.jpeg",
+          cardTitle: "Food demand",
+          cardHeading: "City Lights in New York",
+          description:
+            " New York, the largest city in the U.S., is an architectural marvel with plenty of historic monuments.",
+        },
+
+        {
+          id: 8,
+          img: "https://s3-us-west-2.amazonaws.com/s.cdpn.io/169963/photo-1429043794791-eb8f26f44081.jpeg",
+          cardTitle: "Food demand",
+          cardHeading: "City Lights in New York",
+          description:
+            " New York, the largest city in the U.S., is an architectural marvel with plenty of historic monuments.",
+        },
+      ],
+    };
+  }
+
+  slider = () => {
+    return this.state.card.map((cardValue) => {
+      return (
+        <div key={cardValue.id} className={classes.column}>
+          <div className={classes.post_module}>
+            <div className={classes.thumbnail}>
+              <div className={classes.date}>
+                <p className={classes.day}>New</p>
+              </div>
+              <img src={cardValue.img} alt='' />
+            </div>
+            <div className={classes.post_content}>
+              <p className={classes.category}>{cardValue.cardTitle}</p>
+              <h2 className={classes.title}>{cardValue.cardHeading}</h2>
+              <p>{cardValue.description}</p>
+              {/* <div className="sub-main">
+                          <button className="button-two">
+                            <span>Hover Me</span>
+                          </button>
+                        </div> */}
+            </div>
+          </div>
+        </div>
+      );
+    });
+  };
+
   render() {
     var settings = {
-      autoplay: false,
+      autoplay: true,
       infinite: true,
-      speed: 1000,
-      className: "card-slide",
-      autoplaySpeed: 1000,
+      speed: 3000,
+      className: classes.card_slide,
+      autoplaySpeed: 3000,
       slidesToShow: 3,
       slidesToScroll: 3,
       responsive: [
@@ -24,8 +123,8 @@ export default class Cards extends Component {
             slidesToShow: 2,
             slidesToScroll: 2,
             infinite: true,
-            speed: 500,
-            autoplaySpeed: 500,
+            speed: 3000,
+            autoplaySpeed: 3000,
             dots: true,
           },
         },
@@ -34,8 +133,8 @@ export default class Cards extends Component {
           settings: {
             slidesToShow: 1,
             slidesToScroll: 1,
-            speed: 500,
-            autoplaySpeed: 500,
+            speed: 3000,
+            autoplaySpeed: 3000,
             initialSlide: 2,
           },
         },
@@ -43,294 +142,22 @@ export default class Cards extends Component {
           breakpoint: 480,
           settings: {
             slidesToShow: 1,
-            speed: 500,
-            autoplaySpeed: 500,
+            speed: 3000,
+            autoplaySpeed: 3000,
             slidesToScroll: 1,
           },
         },
       ],
     };
     return (
-      <div className="main-card-container">
-        <h1 className="main-heading">Whats today</h1>
-        <Slider {...settings}>
-          <Fade direction="left">
-            <div className="column">
-              <div className="post-module">
-                <div className="thumbnail">
-                  <div className="date">
-                    <p className="day">New</p>
-                  </div>
-                  <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/169963/photo-1429043794791-eb8f26f44081.jpeg" />
-                </div>
-                <div className="post-content">
-                  <p className="category">Food Demand</p>
-                  <h2 className="title">City Lights in New York</h2>
-                  <p>
-                    New York, the largest city in the U.S., is an architectural
-                    marvel with plenty of historic monuments.
-                  </p>
-                  {/* <div className="sub-main">
-                  <button className="button-two">
-                    <span>Hover Me</span>
-                  </button>
-                </div> */}
-                </div>
-              </div>
-            </div>
-          </Fade>
-          <Fade direction="left">
-            <div className="column">
-              <div className="post-module">
-                <div className="thumbnail">
-                  <div className="date">
-                    <div className="day">New</div>
-                  </div>
-                  <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/169963/photo-1429043794791-eb8f26f44081.jpeg" />
-                </div>
-                <div className="post-content">
-                  <p className="category">Food Demand</p>
-                  <h2 className="title">City Lights in New York</h2>
-                  <p>
-                    New York, the largest city in the U.S., is an architectural
-                    marvel with plenty of historic monuments,
-                  </p>
-                  {/* <div className="sub-main">
-                  <button className="button-two">
-                    <span>Hover Me</span>
-                  </button>
-                </div> */}
-                </div>
-              </div>
-            </div>
-          </Fade>
-          <Fade direction="left">
-            <div className="column">
-              <div className="post-module">
-                <div className="thumbnail">
-                  <div className="date">
-                    <div className="day">New</div>
-                  </div>
-                  <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/169963/photo-1429043794791-eb8f26f44081.jpeg" />
-                </div>
-                <div className="post-content">
-                  <p className="category">Food Demand</p>
-                  <h2 className="title">City Lights in New York</h2>
-                  <p>
-                    New York, the largest city in the U.S., is an architectural
-                    marvel with plenty of historic monuments,
-                  </p>
-                  {/* <div className="sub-main">
-                  <button className="button-two">
-                    <span>Hover Me</span>
-                  </button>
-                </div> */}
-                </div>
-              </div>
-            </div>
-          </Fade>
-          <Fade direction="left">
-            <div className="column">
-              <div className="post-module">
-                <div className="thumbnail">
-                  <div className="date">
-                    <div className="day">New</div>
-                  </div>
-                  <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/169963/photo-1429043794791-eb8f26f44081.jpeg" />
-                </div>
-                <div className="post-content">
-                  <p className="category">Food Demand</p>
-                  <h2 className="title">City Lights in New York</h2>
-                  <p>
-                    New York, the largest city in the U.S., is an architectural
-                    marvel with plenty of historic monuments,
-                  </p>
-                  {/* <div className="sub-main">
-                  <button className="button-two">
-                    <span>Hover Me</span>
-                  </button>
-                </div> */}
-                </div>
-              </div>
-            </div>
-          </Fade>
-          <Fade direction="left">
-            <div className="column">
-              <div className="post-module">
-                <div className="thumbnail">
-                  <div className="date">
-                    <div className="day">New</div>
-                  </div>
-                  <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/169963/photo-1429043794791-eb8f26f44081.jpeg" />
-                </div>
-                <div className="post-content">
-                  <p className="category">Food Demand</p>
-                  <h2 className="title">City Lights in New York</h2>
-                  <p>
-                    New York, the largest city in the U.S., is an architectural
-                    marvel with plenty of historic monuments,
-                  </p>
-                  {/* <div className="sub-main">
-                  <button className="button-two">
-                    <span>Hover Me</span>
-                  </button>
-                </div> */}
-                </div>
-              </div>
-            </div>
-          </Fade>
-          <Fade direction="left">
-            <div className="column">
-              <div className="post-module">
-                <div className="thumbnail">
-                  <div className="date">
-                    <div className="day">New</div>
-                  </div>
-                  <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/169963/photo-1429043794791-eb8f26f44081.jpeg" />
-                </div>
-                <div className="post-content">
-                  <p className="category">Food Demand</p>
-                  <h2 className="title">City Lights in New York</h2>
-                  <p>
-                    New York, the largest city in the U.S., is an architectural
-                    marvel with plenty of historic monuments,
-                  </p>
-                  {/* <div className="sub-main">
-                  <button className="button-two">
-                    <span>Hover Me</span>
-                  </button>
-                </div> */}
-                </div>
-              </div>
-            </div>
-          </Fade>
-          <Fade direction="left">
-            <div className="column">
-              <div className="post-module">
-                <div className="thumbnail">
-                  <div className="date">
-                    <div className="day">New</div>
-                  </div>
-                  <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/169963/photo-1429043794791-eb8f26f44081.jpeg" />
-                </div>
-                <div className="post-content">
-                  <p className="category">Food Demand</p>
-                  <h2 className="title">City Lights in New York</h2>
-                  <p>
-                    New York, the largest city in the U.S., is an architectural
-                    marvel with plenty of historic monuments,
-                  </p>
-                  {/* <div className="sub-main">
-                  <button className="button-two">
-                    <span>Hover Me</span>
-                  </button>
-                </div> */}
-                </div>
-              </div>
-            </div>
-          </Fade>
-          <Fade direction="left">
-          <div className="column">
-            <div className="post-module">
-              <div className="thumbnail">
-                <div className="date">
-                  <div className="day">New</div>
-                </div>
-                <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/169963/photo-1429043794791-eb8f26f44081.jpeg" />
-              </div>
-              <div className="post-content">
-                <p className="category">Food Demand</p>
-                <h2 className="title">City Lights in New York</h2>
-                <p>
-                  New York, the largest city in the U.S., is an architectural
-                  marvel with plenty of historic monuments,
-                </p>
-                {/* <div className="sub-main">
-                  <button className="button-two">
-                    <span>Hover Me</span>
-                  </button>
-                </div> */}
-              </div>
-            </div>
-          </div>
-          </Fade>
-          <Fade direction="left">
-          <div className="column">
-            <div className="post-module">
-              <div className="thumbnail">
-                <div className="date">
-                  <div className="day">New</div>
-                </div>
-                <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/169963/photo-1429043794791-eb8f26f44081.jpeg" />
-              </div>
-              <div className="post-content">
-                <p className="category">Food Demand</p>
-                <h2 className="title">City Lights in New York</h2>
-                <p>
-                  New York, the largest city in the U.S., is an architectural
-                  marvel with plenty of historic monuments,
-                </p>
-                {/* <div className="sub-main">
-                  <button className="button-two">
-                    <span>Hover Me</span>
-                  </button>
-                </div> */}
-              </div>
-            </div>
-          </div>
-          </Fade>
-          <Fade direction="left">
-          <div className="column">
-            <div className="post-module">
-              <div className="thumbnail">
-                <div className="date">
-                  <div className="day">New</div>
-                </div>
-                <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/169963/photo-1429043794791-eb8f26f44081.jpeg" />
-              </div>
-              <div className="post-content">
-                <p className="category">Food Demand</p>
-                <h2 className="title">City Lights in New York</h2>
-                <p>
-                  New York, the largest city in the U.S., is an architectural
-                  marvel with plenty of historic monuments,
-                </p>
-                {/* <div className="sub-main">
-                  <button className="button-two">
-                    <span>Hover Me</span>
-                  </button>
-                </div> */}
-              </div>
-            </div>
-          </div>
-          </Fade>
-          <Fade direction="left">
-          <div className="column">
-            <div className="post-module">
-              <div className="thumbnail">
-                <div className="date">
-                  <div className="day">New</div>
-                </div>
-                <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/169963/photo-1429043794791-eb8f26f44081.jpeg" />
-              </div>
-              <div className="post-content">
-                <p className="category">Food Demand</p>
-                <h2 className="title">City Lights in New York</h2>
-                <p>
-                  New York, the largest city in the U.S., is an architectural
-                  marvel with plenty of historic monuments,
-                </p>
-                {/* <div className="sub-main">
-                  <button className="button-two">
-                    <span>Hover Me</span>
-                  </button>
-                </div> */}
-              </div>
-            </div>
-          </div>
-          </Fade>
-        </Slider>
+      <div className={classes.main_card_container}>
+        <h1 className={classes.main_heading}>Whats today</h1>
+        <Fade direction="left">
+          <Slider {...settings}>{this.slider()}</Slider>
+        </Fade>
       </div>
     );
   }
 }
+
+export default Cards;

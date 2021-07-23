@@ -1,22 +1,25 @@
 import React from "react";
+import { useEffect } from "react";
+import classes from '../css/FoundationStyles.module.css';
 import image1 from "../img/img1.jpg";
 import "../css/project.css";
 import img_slum from "../img/slum.jpg";
 
 function Projects() {
+  useEffect(()=> window.scrollTo(0,0),[]);
   return (
-    <div className="about-main-div">
+    <div >
 
-      <img className="work-image" src={image1} alt="" />
-      <div className="div-main-container">
+      <img className={classes.work_image} src={image1} alt="" />
+      <div className={classes.div_main_container}>
 
-      <h1 className='project-head'>Future Projects</h1>
-        <div className="content-container">
-          <img src={img_slum} className="cont-img" alt="" />
-          <div className="second-container">
-            <h2 className="project-heading">Project Title </h2>
+      <h1 className={classes.project_head}>Future Projects</h1>
+        <div className={classes.content_container}>
+          <img src={img_slum} className={classes.cont_img} alt="" />
+          <div className={classes.second_container}>
+            <h2 className={classes.project_heading}>Project Title </h2>
 
-            <p className="cont-p">
+            <p className={classes.cont_p}>
               Lorem Ipsum is simply dummy text of the printing and typesetting
               industry Lorem Ipsum has content of a page when looking at its
               layout. The point of using Lorem Ipsum is that it has a
@@ -26,12 +29,12 @@ function Projects() {
             </p>
           </div>
         </div>
-        <div className="content-container">
+        <div className={classes.content_container}>
          
-          <div className="second-container">
-            <h2 className="project-heading">Project Title </h2>
+          <div className={classes.second_container}>
+            <h2 className={classes.project_heading}>Project Title </h2>
 
-            <p className="cont-p">
+            <p className={classes.cont_p}>
               Lorem Ipsum is simply dummy text of the printing and typesetting
               industry Lorem Ipsum has content of a page when looking at its
               layout. The point of using Lorem Ipsum is that it has a
@@ -40,14 +43,14 @@ function Projects() {
               text ever since the 1500s
             </p>
           </div>
-          <img src={img_slum} className="cont-img" alt="" />
+          <img src={img_slum} className={classes.cont_img} alt="" />
         </div>
-        <div className="content-container">
-          <img src={img_slum} className="cont-img" alt="" />
-          <div className="second-container">
-            <h2 className="project-heading">Project Title </h2>
+        <div className={classes.content_container}>
+          <img src={img_slum} className={classes.cont_img} alt="" />
+          <div className={classes.second_container}>
+            <h2 className={classes.project_heading}>Project Title </h2>
 
-            <p className="cont-p">
+            <p className={classes.cont_p}>
               Lorem Ipsum is simply dummy text of the printing and typesetting
               industry Lorem Ipsum has content of a page when looking at its
               layout. The point of using Lorem Ipsum is that it has a

@@ -1,12 +1,14 @@
 import React from "react";
-import "../css/home.css";
+import { useEffect } from "react";
+import classes from '../css/FoundationStyles.module.css';
 import Main from "../components/Main";
 import Cards from "../components/Cards";
 import Counts from "../components/Counts";
 
 function Home() {
+  useEffect(()=> window.scrollTo(0,0),[]);
   return (
-    <div className="home-main-div">
+    <div className={classes.home_main_div}>
 
       <Main />
       <Cards />

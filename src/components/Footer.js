@@ -1,5 +1,5 @@
 import React from "react";
-import "../css/Footer.css";
+import classes from '../css/FoundationStyles.module.css';
 import {
   FaFacebook,
   FaTwitter,
@@ -7,123 +7,123 @@ import {
   FaYoutube,
   FaRegCopyright,
 } from "react-icons/fa";
-import { GiAlmond } from "react-icons/gi";
 
 function Footer() {
   return (
-    <footer className="footer">
+
+    <footer className={classes.footer}>
       <div>
-        <ul className="foot-list">
-          <li className="foot-list-a">
-            <div className="footer-item">
-              <h4 className="footer-item-a" hreh="">
+        <ul className={classes.footer_ul_list}>
+          <li className={classes.foot_list_a}>
+            <div className={classes.footer_item}>
+              <h4 className={classes.footer_item_a}>
                 Projects
               </h4>
             </div>
             <div>
-              <ul className="footer-list">
-                <li className="footer-list-items">
-                  <a href="">projec1</a>
+              <ul className={classes.footer_list}>
+                <li className={classes.footer_list_items}>
+                  <a className={classes.list_sub_items}href="#">projec1</a>
                 </li>
-                <li className="footer-list-items">
-                  <a href="">project red</a>
+                <li className={classes.footer_list_items}>
+                  <a className={classes.list_sub_items}href="#">project red</a>
                 </li>
-                <li className="footer-list-items">
-                  <a href="">Project sky</a>
+                <li className={classes.footer_list_items}>
+                  <a className={classes.list_sub_items}href="#">Project sky</a>
                 </li>
-                <li className="footer-list-items">
-                  <a href="">Divine</a>
+                <li className={classes.footer_list_items}>
+                  <a className={classes.list_sub_items}href="#">Divine</a>
                 </li>
               </ul>
             </div>
           </li>
-          <li className="foot-list-a">
-            <div className="footer-item">
-              <h4 className="footer-item-a" hreh="">
+          <li className={classes.foot_list_a}>
+            <div className={classes.footer_item}>
+              <h4 className={classes.footer_item_a}>
                 About
               </h4>
             </div>
             <div>
-              <ul className="footer-list">
-                <li className="footer-list-items">
-                  <a href="">History</a>
+              <ul className={classes.footer_list}>
+                <li className={classes.footer_list_items}>
+                  <a className={classes.list_sub_items}href="#">History</a>
                 </li>
-                <li className="footer-list-items">
-                  <a href="">Mission</a>
+                <li className={classes.footer_list_items}>
+                  <a className={classes.list_sub_items}href="#">Mission</a>
                 </li>
-                <li className="footer-list-items">
-                  <a href="">Report</a>
+                <li className={classes.footer_list_items}>
+                  <a className={classes.list_sub_items}href="#">Report</a>
                 </li>
-                <li className="footer-list-items">
-                  <a href="">Other</a>
+                <li className={classes.footer_list_items}>
+                  <a className={classes.list_sub_items}href="#">Other</a>
                 </li>
               </ul>
             </div>
           </li>
-          <li className="foot-list-a">
-            <div className="footer-item">
-              <h4 className="footer-item-a" hreh="">
+          <li className={classes.foot_list_a}>
+            <div className={classes.footer_item}>
+              <h4 className={classes.footer_item_a}>
                 Branch
               </h4>
             </div>
             <div>
-              <ul className="footer-list">
-                <li className="footer-list-items">
-                  <a href="">North India</a>
+              <ul className={classes.footer_list}>
+                <li className={classes.footer_list_items}>
+                  <a className={classes.list_sub_items}href="#">North India</a>
                 </li>
-                <li className="footer-list-items">
-                  <a href="">Chennai</a>
+                <li className={classes.footer_list_items}>
+                  <a className={classes.list_sub_items}href="#">Chennai</a>
                 </li>
-                <li className="footer-list-items">
-                  <a href="">Mumbai</a>
+                <li className={classes.footer_list_items}>
+                  <a className={classes.list_sub_items}href="#">Mumbai</a>
                 </li>
-                <li className="footer-list-items">
-                  <a href="">Madurai</a>
+                <li className={classes.footer_list_items}>
+                  <a className={classes.list_sub_items}href="#">Madurai</a>
                 </li>
               </ul>
             </div>
           </li>
-          <li className="foot-list-a">
-            <div className="footer-item">
-              <h4 className="footer-item-a" hreh="">
+          <li className={classes.foot_list_a}>
+            <div className={classes.footer_item}>
+              <h4 className={classes.footer_item_a}>
                 Media
               </h4>
             </div>
             <div>
-              <ul className="footer-list">
-                <li className="footer-list-items">
-                  <a href="">News</a>
+              <ul className={classes.footer_list}>
+                <li className={classes.footer_list_items}>
+                  <a className={classes.list_sub_items} href="#">News</a>
                 </li>
-                <li className="footer-list-items">
-                  <a href="">Videos</a>
+                <li className={classes.footer_list_items}>
+                  <a className={classes.list_sub_items}href="#">Videos</a>
                 </li>
-                <li className="footer-list-items">
-                  <a href="">Photos</a>
+                <li className={classes.footer_list_items}>
+                  <a className={classes.list_sub_items}href="#">Photos</a>
                 </li>
-                <li className="footer-list-items">
-                  <a href="">Other</a>
+                <li className={classes.footer_list_items}>
+                  <a className={classes.list_sub_items}href="#">Other</a>
                 </li>
               </ul>
             </div>
           </li>
           <li>
-            <h4 className='follow-h2'>Follow on</h4>
-            <a href=""> 
-              <FaFacebook id="fb"  className="share-icon" size="32px" />
+            <h4 className={classes.follow_h2}>Follow on</h4>
+            <a className={classes.list_sub_items}href="#"> 
+              <FaFacebook id={classes.fb}  className={classes.share_icon} size="32px" />
             </a>
-            <a href="">
-              <FaTwitter id="tw" className="share-icon" size="32px" />
+            <a className={classes.list_sub_items}href="#">
+              <FaTwitter id={classes.tw} className={classes.share_icon} size="32px" />
             </a>
-            <a href="">
-              <FaWhatsapp id="wa" className="share-icon" size="32px" />
+            <a className={classes.list_sub_items}href="#">
+              <FaWhatsapp id={classes.wa} className={classes.share_icon} size="32px" />
             </a>
-            <a href="">
-              <FaYoutube id="yt" className="share-icon" size="32px" />
+            <a className={classes.list_sub_items}href="#">
+              <FaYoutube id={classes.yt} className={classes.share_icon} size="32px" />
             </a>
           </li>
-          <li className='foot-contact'>
-            <h4 className='reach-us-btn'>Reach us</h4>
-            <p>
+          <li className={classes.foot_content}>
+            <h4 className={classes.reachus_title}>Reach us</h4>
+            <p className={classes.reachus_content}>
               91+ 9940291408
               <br />
               Lead integrated business Pvt.Ltd.
@@ -136,7 +136,7 @@ function Footer() {
           </li>
         </ul>
       </div>
-      <p className='foot-copyright'>
+      <p className={classes.foot_copyright}>
         <FaRegCopyright />
         Lead integrated business Pvt.Ltd.,All rights reserved.
       </p>
