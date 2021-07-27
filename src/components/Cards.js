@@ -4,6 +4,7 @@ import Slider from "react-slick";
 import classes from "../css/FoundationStyles.module.css";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import '../css/card.css';
 
 export class Cards extends Component {
   constructor(props) {
@@ -25,7 +26,7 @@ export class Cards extends Component {
           cardTitle: "cloths demand",
           cardHeading: " in New York",
           description:
-            " New York, the largest city in the U.S., is an architecy text ever since the 1500s, when an unknown printe  took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, butural marvel with plenty of historic monuments.",
+          " New York, the largest city in the U.S., is an architectural marvel with plenty of historic monuments.",
         },
         {
           id: 3,
@@ -109,6 +110,7 @@ export class Cards extends Component {
 
   render() {
     var settings = {
+      dots: true,
       autoplay: true,
       infinite: true,
       speed: 3000,
@@ -118,11 +120,13 @@ export class Cards extends Component {
       slidesToScroll: 3,
       responsive: [
         {
+          
           breakpoint: 1024,
           settings: {
             slidesToShow: 2,
             slidesToScroll: 2,
             infinite: true,
+            autoplay: true,
             speed: 3000,
             autoplaySpeed: 3000,
             dots: true,
@@ -130,9 +134,11 @@ export class Cards extends Component {
         },
         {
           breakpoint: 600,
+          autoplay: false,
           settings: {
             slidesToShow: 1,
             slidesToScroll: 1,
+            autoplay: false,
             speed: 3000,
             autoplaySpeed: 3000,
             initialSlide: 2,
@@ -140,9 +146,11 @@ export class Cards extends Component {
         },
         {
           breakpoint: 480,
+          autoplay: false,
           settings: {
             slidesToShow: 1,
-            speed: 3000,
+            autoplay: false,
+            speed: 500,
             autoplaySpeed: 3000,
             slidesToScroll: 1,
           },

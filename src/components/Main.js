@@ -8,13 +8,13 @@ import "../css/main.css";
 
 function Main() {
   return (
-    <div>
+    <div id="main">
       <Slide_img_Res />
       <div className={classes.ceo_div}>
        
         <div className={classes.main_about_container}>
         <Fade direction="left">
-          <img src={img1} className={classes.main_ceo_img}alt="" />
+          <img  id="main"  src={img1} className={classes.main_ceo_img}alt="" />
           </Fade>
           <Fade direction="right">
           <div className={classes.main_ceo_container_div}>

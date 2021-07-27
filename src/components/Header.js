@@ -11,10 +11,19 @@ export default function Header() {
     const [click,setClick]=useState(false)
     const clickHandler = () =>setClick(!click)
     const closeMenu =() =>setClick(false)
+    const [showNavbar, setShowNavbar] = useState(false)
 
+    const checkNavScroll = () =>{
+      if(!showNavbar && window.pageYOffset > 20)
+      setShowNavbar(true)
+      else if (showNavbar && window.pageYOffset <= 20)
+      setShowNavbar(false)
+    }
+
+    window.addEventListener('scroll',checkNavScroll)
   return (
-    <div className={classes.main_navbar}>
-            <div className={classes.navbar}>
+    <div className={classes.main_navbar} >
+            <div className={`${classes.navbar} ${showNavbar ? classes.scrollNav : classes.resetNav}`}>
          <Link to={'/'}>
         <div className={classes.logo}>
         <img src={img} className={classes.logo_icon} alt=''/>
@@ -22,7 +31,7 @@ export default function Header() {
       
         </div>
         </Link>
-        <ul className={click ? classes.nav_list_mobile : classes.nav_list }>
+        <ul className={click ? classes.nav_list_mobile : classes.nav_list } onClick={closeMenu}>
         <li className={classes.list} onClick={closeMenu}>
           <div className={classes.nav_list_item}>
             <Link to='/'>home</Link>
@@ -49,14 +58,14 @@ export default function Header() {
             </div>
           </li>
         </ul>
-        <ul className={classes.sign_up}>
+        {/* <ul className={classes.sign_up}>
           <li className={classes.sign}>
             <a href='#'>Sign-UP</a>
             </li>
           <li className={classes.sign}>
             <a href='#'>Donate</a>
           </li>
-        </ul>
+        </ul> */}
         <div className={classes.menu_icon} onClick={clickHandler}>
           {click?
           (<AiOutlineClose className={classes.menu} size='40px'/>)
