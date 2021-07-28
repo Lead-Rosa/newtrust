@@ -84,7 +84,7 @@ export class Cards extends Component {
   slider = () => {
     return this.state.card.map((cardValue) => {
       return (
-        <div key={cardValue.id} className={classes.column}>
+        // <div key={cardValue.id} className={classes.column}>
           <div className={classes.post_module}>
             <div className={classes.thumbnail}>
               <div className={classes.date}>
@@ -103,7 +103,7 @@ export class Cards extends Component {
                         </div> */}
             </div>
           </div>
-        </div>
+        // </div>
       );
     });
   };
@@ -113,11 +113,11 @@ export class Cards extends Component {
       dots: true,
       autoplay: true,
       infinite: true,
-      speed: 3000,
+      speed: 2000,
       className: classes.card_slide,
       autoplaySpeed: 3000,
-      slidesToShow: 3,
-      slidesToScroll: 3,
+      slidesToShow: 4,
+      slidesToScroll: 4,
       responsive: [
         {
           
@@ -127,7 +127,7 @@ export class Cards extends Component {
             slidesToScroll: 2,
             infinite: true,
             autoplay: true,
-            speed: 3000,
+            speed: 2000,
             autoplaySpeed: 3000,
             dots: true,
           },
@@ -139,7 +139,7 @@ export class Cards extends Component {
             slidesToShow: 1,
             slidesToScroll: 1,
             autoplay: false,
-            speed: 3000,
+            speed: 2000,
             autoplaySpeed: 3000,
             initialSlide: 2,
           },
@@ -150,7 +150,7 @@ export class Cards extends Component {
           settings: {
             slidesToShow: 1,
             autoplay: false,
-            speed: 500,
+            speed: 800,
             autoplaySpeed: 3000,
             slidesToScroll: 1,
           },

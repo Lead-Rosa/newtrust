@@ -90,22 +90,25 @@ p {
 /* Card Style */
 
 .main_card_container {
-  margin: 20px;
+margin: 3rem auto;
+
+  justify-content:center ;
   align-items: center;
+  max-width: 75%;
 }
-.card_slide {
-  margin: 30px auto;
-  align-content: center;
-  width: 75%;
-  padding: 20px;
-}
+
+/* .column{
+  background-color: #52f382;
+  white-space:inherit;
+width: 2rem;
+} */
 .post_module {
   position: relative;
   z-index: 1;
   display: flex;
   /* gap: 1rem; */
   max-width: 270px;
-  margin: auto;
+  margin: auto 2.5rem; 
   height: 400px;
   -webkit-box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
   -moz-box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.15);
@@ -137,7 +140,7 @@ p {
 }
 .post_module .thumbnail .date {
   position: absolute;
-  line-height: 0;
+  /* line-height: .2rem; */
   top: 0px;
   right: 0px;
   z-index: 1;
@@ -240,21 +243,34 @@ p {
   float: right;
 }
 
-.slick_prev,
+.slick
+/* .slick_prev,
 .slick_next {
-  margin: 20px;
+  font-size: 0;
+  line-height: 0;
+  position: absolute;
+  top: 50%;
+  display: block;
+  width: 20px;
+  height: 20px;
+  padding: 0;
+  transform: translate(0, -50%);
+  cursor: pointer;
+  color: #cc3a3ae8;
+  border: none;
+  outline: none;
+  background: rgb(6, 123, 226);
 }
 .slick_prev {
   left: -45px;
 }
 .slick_next {
   right: -45px;
-  color: #000000;
-}
+} */
 
-.post_content p {
+/* .post_content p {
   line-height: 20px;
-}
+} */
 
 /* Count Style */
 
@@ -482,6 +498,7 @@ p {
 .main_heading {
   color: var(--text);
   padding: 2rem 0 2rem 0;
+  margin-bottom: 2rem;
   text-align: center;
 }
 .main_h2 {
@@ -1006,7 +1023,7 @@ strong {
 
   .card_slide {
     position: relative;
-    margin: 0;
+    margin: 2rem;
 
     margin-bottom: 20px;
     padding-left: 0;
@@ -1015,7 +1032,9 @@ strong {
     width: 90%;
     padding: 0;
   }
-
+.post_module{
+  margin: auto
+}
   /* Count Style Mobile */
 
   .count_container {

@@ -45,6 +45,9 @@ button {
 }
 
  @media (max-width: 648px) {
+   *{
+     line-height: 28px
+   }
    h1{
      font-size: 40px
    }
