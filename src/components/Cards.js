@@ -4,7 +4,7 @@ import Slider from "react-slick";
 import classes from "../css/FoundationStyles.module.css";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import '../css/card.css';
+import "../css/card.css";
 
 export class Cards extends Component {
   constructor(props) {
@@ -15,7 +15,7 @@ export class Cards extends Component {
         {
           id: 1,
           img: "https://s3-us-west-2.amazonaws.com/s.cdpn.io/169963/photo-1429043794791-eb8f26f44081.jpeg",
-          cardTitle: "Food demand",
+          author: "Elvis presley",
           cardHeading: "City Lights in New York",
           description:
             " New York, the largest city in the U.S., is an architectural marvel with plenty of historic monuments.",
@@ -23,60 +23,44 @@ export class Cards extends Component {
         {
           id: 2,
           img: "https://s3-us-west-2.amazonaws.com/s.cdpn.io/169963/photo-1429043794791-eb8f26f44081.jpeg",
-          cardTitle: "cloths demand",
-          cardHeading: " in New York",
+          author: "Travis Scott",
+          cardHeading: "City Lights in New York",
           description:
-          " New York, the largest city in the U.S., is an architectural marvel with plenty of historic monuments.",
+            " New York, the largest city in the U.S., is an architectural marvel with plenty of historic monuments.",
         },
         {
           id: 3,
           img: "https://s3-us-west-2.amazonaws.com/s.cdpn.io/169963/photo-1429043794791-eb8f26f44081.jpeg",
-          cardTitle: "Food demand",
+          author: "Trevor Daniel",
           cardHeading: "City Lights in New York",
           description:
             " New York, the largest city in the U.S., is an architectural marvel with plenty of historic monuments.",
         },
-        {
-          id: 4,
-          img: "https://s3-us-west-2.amazonaws.com/s.cdpn.io/169963/photo-1429043794791-eb8f26f44081.jpeg",
-          cardTitle: "Food demand",
-          cardHeading: "City Lights in New York",
-          description:
-            " New York, the largest city in the U.S., is an architectural marvel with plenty of historic monuments.",
-        },
-        {
-          id: 5,
-          img: "https://s3-us-west-2.amazonaws.com/s.cdpn.io/169963/photo-1429043794791-eb8f26f44081.jpeg",
-          cardTitle: "Food demand",
-          cardHeading: "City Lights in New York",
-          description:
-            " New York, the largest city in the U.S., is an architectural marvel with plenty of historic monuments.",
-        },
-        {
-          id: 6,
-          img: "https://s3-us-west-2.amazonaws.com/s.cdpn.io/169963/photo-1429043794791-eb8f26f44081.jpeg",
-          cardTitle: "Food demand",
-          cardHeading: "City Lights in New York",
-          description:
-            " New York, the largest city in the U.S., is an architectural marvel with plenty of historic monuments.",
-        },
-        {
-          id: 7,
-          img: "https://s3-us-west-2.amazonaws.com/s.cdpn.io/169963/photo-1429043794791-eb8f26f44081.jpeg",
-          cardTitle: "Food demand",
-          cardHeading: "City Lights in New York",
-          description:
-            " New York, the largest city in the U.S., is an architectural marvel with plenty of historic monuments.",
-        },
+        // {
+        //   id: 4,
+        //   img: "https://s3-us-west-2.amazonaws.com/s.cdpn.io/169963/photo-1429043794791-eb8f26f44081.jpeg",
+        //   author: "Ellie Goulding",
+        //   cardHeading: "City Lights in New York",
+        //   description:
+        //     " New York, the largest city in the U.S., is an architectural marvel with plenty of historic monuments.",
+        // },
+        // {
+        //   id: 5,
+        //   img: "https://s3-us-west-2.amazonaws.com/s.cdpn.io/169963/photo-1429043794791-eb8f26f44081.jpeg",
+        //   author: "Taylor Swift",
+        //   cardHeading: "City Lights in New York",
+        //   description:
+        //     " New York, the largest city in the U.S., is an architectural marvel with plenty of historic monuments.",
+        // },
+        // {
+        //   id: 6,
+        //   img: "https://s3-us-west-2.amazonaws.com/s.cdpn.io/169963/photo-1429043794791-eb8f26f44081.jpeg",
+        //   author: "The Weeknd",
+        //   cardHeading: "City Lights in New York",
+        //   description:
+        //     " New York, the largest city in the U.S., is an architectural marvel with plenty of historic monuments.",
+        // },
 
-        {
-          id: 8,
-          img: "https://s3-us-west-2.amazonaws.com/s.cdpn.io/169963/photo-1429043794791-eb8f26f44081.jpeg",
-          cardTitle: "Food demand",
-          cardHeading: "City Lights in New York",
-          description:
-            " New York, the largest city in the U.S., is an architectural marvel with plenty of historic monuments.",
-        },
       ],
     };
   }
@@ -85,24 +69,24 @@ export class Cards extends Component {
     return this.state.card.map((cardValue) => {
       return (
         // <div key={cardValue.id} className={classes.column}>
-          <div className={classes.post_module}>
-            <div className={classes.thumbnail}>
-              <div className={classes.date}>
+        <div className={classes.post_module}>
+          <div className={classes.thumbnail}>
+            {/* <div className={classes.date}>
                 <p className={classes.day}>New</p>
-              </div>
-              <img src={cardValue.img} alt='' />
-            </div>
-            <div className={classes.post_content}>
-              <p className={classes.category}>{cardValue.cardTitle}</p>
-              <h2 className={classes.title}>{cardValue.cardHeading}</h2>
-              <p>{cardValue.description}</p>
-              {/* <div className="sub-main">
+              </div> */}
+            <img src={cardValue.img} alt="" />
+          </div>
+          <div className={classes.post_content}>
+            <p className={classes.category}>{cardValue.author}</p>
+            <h2 className={classes.title}>{cardValue.cardHeading}</h2>
+            <p>{cardValue.description}</p>
+            {/* <div className="sub-main">
                           <button className="button-two">
                             <span>Hover Me</span>
                           </button>
                         </div> */}
-            </div>
           </div>
+        </div>
         // </div>
       );
     });
@@ -116,11 +100,10 @@ export class Cards extends Component {
       speed: 2000,
       className: classes.card_slide,
       autoplaySpeed: 3000,
-      slidesToShow: 4,
-      slidesToScroll: 4,
+      slidesToShow: 3,
+      slidesToScroll: 3,
       responsive: [
         {
-          
           breakpoint: 1024,
           settings: {
             slidesToShow: 2,
@@ -159,10 +142,26 @@ export class Cards extends Component {
     };
     return (
       <div className={classes.main_card_container}>
-        <h1 className={classes.main_heading}>Whats today</h1>
-        <Fade direction="left">
-          <Slider {...settings}>{this.slider()}</Slider>
-        </Fade>
+        <h1 className={classes.main_heading}>Latest</h1>
+
+        {/* <Fade direction="left"> */}
+          <div className={classes.cards_grid}>
+          {this.state.card.map((cardValue) => {
+            return (
+              <div className={classes.card}>
+              <img className={classes.card_img} src={cardValue.img} alt='' />
+              <div className={classes.card_body}>
+                <h2>{cardValue.cardHeading}</h2>
+                <p>{cardValue.description}</p>
+                <h5>{cardValue.author}</h5>
+              </div>
+            </div>
+            );
+          })}
+
+          {/* {this.slider()} */}
+          </div>
+        {/* </Fade> */}
       </div>
     );
   }

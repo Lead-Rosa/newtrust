@@ -22,7 +22,7 @@ function Work() {
         <div className={classes.title_content}>
           <h2 className={classes.main_title}>Our work Heading main</h2>
           <p className={classes.main_content}>
-            Lorem Ipsum is simply dummy{classes.text}of the printing and typesetting
+            Lorem Ipsum is simply dummy of the printing and typesetting
             industry. Lorem Ipsum has been the industry's standard dummyever since the 1500s, when an unknown printer took a galley of type
             and scrambled it to make a type specimen book. It has survived not
             only five centuries, but also the leap into electronic typesetting,

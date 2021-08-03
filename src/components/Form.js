@@ -119,7 +119,7 @@ function Form() {
           {errors.email && <p className={classes.errMsg}>{errors.address}</p>}
         </div>
         <div className={classes.btn_div}>
-          <button type="submit" className={classes.btn}>
+          <button type="submit" className={classes.submitBtn}>
             Submit
           </button>
         </div>

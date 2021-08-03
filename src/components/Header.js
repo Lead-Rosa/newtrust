@@ -2,9 +2,9 @@ import React from 'react'
 import { useState } from 'react';
 import classes from '../css/FoundationStyles.module.css';
 import { AiOutlineMenu ,AiOutlineClose } from "react-icons/ai";
+import { BsFillPlayFill } from "react-icons/bs";
 import {  Link } from 'react-router-dom';
 import img from '../img/handshake.png'
-
 
 export default function Header() {
 
@@ -26,8 +26,10 @@ export default function Header() {
             <div className={`${classes.navbar} ${showNavbar ? classes.scrollNav : classes.resetNav}`}>
          <Link to={'/'}>
         <div className={classes.logo}>
-        <img src={img} className={classes.logo_icon} alt=''/>
-          <h2>Head</h2>
+        <i className="fab fa-atlassian"></i>
+          {/* <BsFillPlayFill size='3rem'/> */}
+        {/* <img src={img} className={classes.logo_icon} alt=''/> */}
+          <h2>Trigram</h2>
       
         </div>
         </Link>
