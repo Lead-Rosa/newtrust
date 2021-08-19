@@ -5,166 +5,138 @@ import classes from "../css/FoundationStyles.module.css";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import "../css/card.css";
+import {
+  Card,
+  CardContent,
+  CardMedia,
+  Typography,
+  CardActionArea,
+  Grid,
+} from "@material-ui/core";
+import img1 from "../img/image5.jpg";
+import image1 from "../img/imgs/recent1.png";
+import image2 from "../img/imgs/recent2.jpg";
+import image3 from "../img/imgs/recent3.jpg";
+import { makeStyles } from "@material-ui/core";
 
-export class Cards extends Component {
-  constructor(props) {
-    super(props);
+const useclasses = makeStyles((theme) => ({
+  cardGrid: {
+    padding: "10px",
+  },
+  cardHeading: {
+    fontSize: 35,
+    [theme.breakpoints.up("xs")]: {
+      fontSize: 30,
+    },
+    [theme.breakpoints.up("sm")]: {
+      fontSize: 50,
+    },
+    [theme.breakpoints.up("md")]: {
+      fontSize: 40,
+    },
+    [theme.breakpoints.up("lg")]: {
+      fontSize: 50,
+    },
+  },
+  cardImage: {
+    width: "100%",
+    height: "230px",
+  },
+  cardContent: {
+    height: "230px",
+  },
+  cardTitle:{
+    color:'#1a74fc',
+  },
+}));
 
-    this.state = {
-      card: [
-        {
-          id: 1,
-          img: "https://s3-us-west-2.amazonaws.com/s.cdpn.io/169963/photo-1429043794791-eb8f26f44081.jpeg",
-          author: "Elvis presley",
-          cardHeading: "City Lights in New York",
-          description:
-            " New York, the largest city in the U.S., is an architectural marvel with plenty of historic monuments.",
-        },
-        {
-          id: 2,
-          img: "https://s3-us-west-2.amazonaws.com/s.cdpn.io/169963/photo-1429043794791-eb8f26f44081.jpeg",
-          author: "Travis Scott",
-          cardHeading: "City Lights in New York",
-          description:
-            " New York, the largest city in the U.S., is an architectural marvel with plenty of historic monuments.",
-        },
-        {
-          id: 3,
-          img: "https://s3-us-west-2.amazonaws.com/s.cdpn.io/169963/photo-1429043794791-eb8f26f44081.jpeg",
-          author: "Trevor Daniel",
-          cardHeading: "City Lights in New York",
-          description:
-            " New York, the largest city in the U.S., is an architectural marvel with plenty of historic monuments.",
-        },
-        // {
-        //   id: 4,
-        //   img: "https://s3-us-west-2.amazonaws.com/s.cdpn.io/169963/photo-1429043794791-eb8f26f44081.jpeg",
-        //   author: "Ellie Goulding",
-        //   cardHeading: "City Lights in New York",
-        //   description:
-        //     " New York, the largest city in the U.S., is an architectural marvel with plenty of historic monuments.",
-        // },
-        // {
-        //   id: 5,
-        //   img: "https://s3-us-west-2.amazonaws.com/s.cdpn.io/169963/photo-1429043794791-eb8f26f44081.jpeg",
-        //   author: "Taylor Swift",
-        //   cardHeading: "City Lights in New York",
-        //   description:
-        //     " New York, the largest city in the U.S., is an architectural marvel with plenty of historic monuments.",
-        // },
-        // {
-        //   id: 6,
-        //   img: "https://s3-us-west-2.amazonaws.com/s.cdpn.io/169963/photo-1429043794791-eb8f26f44081.jpeg",
-        //   author: "The Weeknd",
-        //   cardHeading: "City Lights in New York",
-        //   description:
-        //     " New York, the largest city in the U.S., is an architectural marvel with plenty of historic monuments.",
-        // },
+const Cards = () => {
+  const classes = useclasses();
+  const card = [
+    {
+      id: 1,
+      image: image1,
+      location: "chennai",
+      cardHeading: "Educate the Uneducated",
+      description:
+        " The predominance of hills and forest cover in the Seven Sister states adversely impact its terrain and geographic connectivity. Active fault planes result in heightened seismic activity.",
+    },
+    {
+      id: 2,
+      image: image2,
+      location: "chennai",
+      cardHeading: "Spreading the joy of reading in  pandemic",
+      description:
+        "A compilation of stories of children, teachers and librarians who inspire to keep going and give hope that things will get better, from Parag",
+    },
+    {
+      id: 3,
+      image: image3,
+      location: "chennai",
+      cardHeading: "Reclaiming the lost crops",
+      description:
+        "Drought-resistant fast-growing traditional crops like millet are re-emerging thanks to the Trusts’  adoption of the modern system of millet intensification",
+    },
+    {
+      id: 4,
+      image:
+        "https://s3-us-west-2.amazonaws.com/s.cdpn.io/169963/photo-1429043794791-eb8f26f44081.jpeg",
+      location: "chennai",
+      cardHeading: "Tailoring Classes to Home Makers",
+      description:
+        "Tailoring classes for the women and widows from below poverty level, where they will trained and to start their own tailoring shop which they can lead their life.",
+    },
+  ];
 
-      ],
-    };
-  }
+  return (
+    <>
+      <Typography
+        variant="h3"
+        align="center"
+        gutterBottom
+        className={classes.cardHeading}
+      >
+        Recent
+      </Typography>
+      <Grid container spacing={0} justify="center">
+        {card.map((cardValue) => (
+          <Grid
+            className={classes.cardGrid}
+            item
+            xs={9}
+            sm={4}
+            md={3}
+            ig={3}
+            xl={2}
+            key={cardValue.id}
+          >
+            <Card>
+              <CardActionArea>
+                <CardMedia
+                  component="img"
+                  className={classes.cardImage}
+                  image={cardValue.image}
+                  title="Paella dish"
+                />
 
-  slider = () => {
-    return this.state.card.map((cardValue) => {
-      return (
-        // <div key={cardValue.id} className={classes.column}>
-        <div className={classes.post_module}>
-          <div className={classes.thumbnail}>
-            {/* <div className={classes.date}>
-                <p className={classes.day}>New</p>
-              </div> */}
-            <img src={cardValue.img} alt="" />
-          </div>
-          <div className={classes.post_content}>
-            <p className={classes.category}>{cardValue.author}</p>
-            <h2 className={classes.title}>{cardValue.cardHeading}</h2>
-            <p>{cardValue.description}</p>
-            {/* <div className="sub-main">
-                          <button className="button-two">
-                            <span>Hover Me</span>
-                          </button>
-                        </div> */}
-          </div>
-        </div>
-        // </div>
-      );
-    });
-  };
-
-  render() {
-    var settings = {
-      dots: true,
-      autoplay: true,
-      infinite: true,
-      speed: 2000,
-      className: classes.card_slide,
-      autoplaySpeed: 3000,
-      slidesToShow: 3,
-      slidesToScroll: 3,
-      responsive: [
-        {
-          breakpoint: 1024,
-          settings: {
-            slidesToShow: 2,
-            slidesToScroll: 2,
-            infinite: true,
-            autoplay: true,
-            speed: 2000,
-            autoplaySpeed: 3000,
-            dots: true,
-          },
-        },
-        {
-          breakpoint: 600,
-          autoplay: false,
-          settings: {
-            slidesToShow: 1,
-            slidesToScroll: 1,
-            autoplay: false,
-            speed: 2000,
-            autoplaySpeed: 3000,
-            initialSlide: 2,
-          },
-        },
-        {
-          breakpoint: 480,
-          autoplay: false,
-          settings: {
-            slidesToShow: 1,
-            autoplay: false,
-            speed: 800,
-            autoplaySpeed: 3000,
-            slidesToScroll: 1,
-          },
-        },
-      ],
-    };
-    return (
-      <div className={classes.main_card_container}>
-        <h1 className={classes.main_heading}>Latest</h1>
-
-        {/* <Fade direction="left"> */}
-          <div className={classes.cards_grid}>
-          {this.state.card.map((cardValue) => {
-            return (
-              <div className={classes.card}>
-              <img className={classes.card_img} src={cardValue.img} alt='' />
-              <div className={classes.card_body}>
-                <h2>{cardValue.cardHeading}</h2>
-                <p>{cardValue.description}</p>
-                <h5>{cardValue.author}</h5>
-              </div>
-            </div>
-            );
-          })}
-
-          {/* {this.slider()} */}
-          </div>
-        {/* </Fade> */}
-      </div>
-    );
-  }
-}
+                <CardContent className={classes.cardContent}>
+                  <Typography gutterBottom className={classes.cardTitle} variant="h5" component="div">
+                    {cardValue.cardHeading}
+                  </Typography>
+                  <Typography variant="body2" gutterBottom>
+                    {cardValue.description}
+                  </Typography>
+                  <Typography variant="overline" align="right">
+                    {cardValue.location}
+                  </Typography>
+                </CardContent>
+              </CardActionArea>
+            </Card>
+          </Grid>
+        ))}
+      </Grid>
+    </>
+  );
+};
 
 export default Cards;

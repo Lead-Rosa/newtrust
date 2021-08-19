@@ -1,83 +1,198 @@
-import React from 'react'
-import { useState } from 'react';
-import classes from '../css/FoundationStyles.module.css';
-import { AiOutlineMenu ,AiOutlineClose } from "react-icons/ai";
-import { BsFillPlayFill } from "react-icons/bs";
-import {  Link } from 'react-router-dom';
-import img from '../img/handshake.png'
 
-export default function Header() {
 
-    const [click,setClick]=useState(false)
-    const clickHandler = () =>setClick(!click)
-    const closeMenu =() =>setClick(false)
-    const [showNavbar, setShowNavbar] = useState(false)
 
-    const checkNavScroll = () =>{
-      if(!showNavbar && window.pageYOffset > 20)
-      setShowNavbar(true)
-      else if (showNavbar && window.pageYOffset <= 20)
-      setShowNavbar(false)
+// IMPORTING APIS
+import React from "react";
+import {
+  AppBar,
+  Toolbar,
+  IconButton,
+  Typography,
+  useMediaQuery,
+  Button,
+  useScrollTrigger,
+  Slide,
+  Menu,
+  MenuItem,
+  Paper,
+  ListItemIcon,
+  Divider,
+  List,
+  ListItem,
+  ListItemText,
+  Drawer,
+} from "@material-ui/core";
+import classeses from '../css/FoundationStyles.module.css';
+import { Link } from "react-router-dom";
+import { useTheme } from "@material-ui/core/";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import useStyles from './HeaderStyles'
+import Work from "../pages/Work";
+import Home from "../pages/Home";
+import About from "../pages/About";
+import Contact from "../pages/Contact";
+import Projects from "../pages/Projects";
+
+// IMPORTING ICONS
+import MenuIcon from '@material-ui/icons/Menu';
+import { AiOutlineHome ,AiOutlineFundProjectionScreen , } from "react-icons/ai";
+import { RiMedalLine } from "react-icons/ri";
+import { GrContactInfo } from "react-icons/gr";
+
+// LOCAL-STYLING
+
+
+function HideOnScroll(props) {
+  const { children } = props;
+  const trigger = useScrollTrigger();
+
+  return (
+    <Slide appear={false} direction={"down"} in={!trigger}>
+      {children}
+    </Slide>
+  );
+}
+
+const Header = (props) => {
+  const classes = useStyles();
+  const [anchor, setAnchor] = React.useState(null);
+  const [open, setOpen] = React.useState(false);
+  const theme = useTheme();
+  const isMobile = useMediaQuery(theme.breakpoints.down("sm"));
+  const handleMenu = (event) => {
+    setAnchor(event.currentTarget);
+  };
+
+  const toggleDrawer = (event) => {
+    if (
+      event.type === "keydown" &&
+      (event.key === "Tab" || event.key === "Shift")
+    ) {
+      return;
     }
 
-    window.addEventListener('scroll',checkNavScroll)
+    setOpen(!open);
+  };
+
   return (
-    <div className={classes.main_navbar} >
-            <div className={`${classes.navbar} ${showNavbar ? classes.scrollNav : classes.resetNav}`}>
-         <Link to={'/'}>
-        <div className={classes.logo}>
-        <i className="fab fa-atlassian"></i>
-          {/* <BsFillPlayFill size='3rem'/> */}
-        {/* <img src={img} className={classes.logo_icon} alt=''/> */}
-          <h2>Trigram</h2>
-      
-        </div>
-        </Link>
-        <ul className={click ? classes.nav_list_mobile : classes.nav_list } onClick={closeMenu}>
-        <li className={classes.list} onClick={closeMenu}>
-          <div className={classes.nav_list_item}>
+
+    <div className={classes.root}>
+      {/* <Router> */}
+      <HideOnScroll {...props}>
+
+          <AppBar className={classes.appBar} color="inherit">
+            <Toolbar>
+  
+              <Typography variant="h4" component="p" color='inherit' className={classes.title} component={Link} to='/'>
+              <i className="fab fa-atlassian"></i>
+                Trigram
+              </Typography>
+              {isMobile ? (
+                <>
+                  <IconButton
+                    color="textPrimary"
+                    className={classes.menuButton}
+                    edge="start"
+                    aria-label="open drawer"
+                    onClick={toggleDrawer}
+                  >
+                    <MenuIcon />
+                  </IconButton>
+
+                  <Drawer
+                    className={classes.drawer}
+                    variant="temporary"
+                    anchor="right"
+                    open={open}
+                    onClose={toggleDrawer}
+                    transitionDuration={500}
+                  >
+                    {/* <div className={classes.toolbar} /> */}
+                    <Divider />
+                    <div className={classes.drawerWidth}>
+                    <List className={classes.list} color="secondary">
+                      <ListItem button onClick={toggleDrawer} component={Link} to='/'>
+                      <ListItemIcon>
+                      <i class="fas fa-home"></i>
+                      </ListItemIcon>
+                        <ListItemText primary="Home" />
+                      </ListItem>
+                      <ListItem button onClick={toggleDrawer} component={Link} to='/Project'>
+                      <ListItemIcon>
+                      <i class="fas fa-project-diagram"></i>
+                        </ListItemIcon>
+                        <ListItemText primary="Projects" />
+                      </ListItem>
+                      <ListItem button onClick={toggleDrawer} component={Link} to='/Work'>
+                      <ListItemIcon>
+                      <i class="fas fa-briefcase"></i>
+                        </ListItemIcon>
+                        <ListItemText primary="Work" />
+                      </ListItem>
+                      <ListItem button onClick={toggleDrawer} component={Link} to='/About'>
+                      <ListItemIcon>
+                      <i class="fas fa-window-restore"></i>
+                        </ListItemIcon>
+                        <ListItemText primary="About" />
+                      </ListItem>
+                      <ListItem button onClick={toggleDrawer} component={Link} to='/Contact'>
+                      <ListItemIcon>
+                      <i class="fas fa-address-book"></i>
+                        </ListItemIcon>
+                        <ListItemText primary="Contact" />
+                      </ListItem>
+                    </List>
+                    </div>
+                    <Divider />
+                  </Drawer>
+                </>
+              ) : (
+                <div style={{ marginRight: "2rem" }}>
+                 <ul className={classeses.nav_list }>
+        <li className={classeses.list}>
+          <div className={classeses.nav_list_item}>
             <Link to='/'>home</Link>
             </div>
           </li>
-          <li className={classes.list} onClick={closeMenu}>
-          <div className={classes.nav_list_item}>
+          <li className={classeses.list}>
+          <div className={classeses.nav_list_item}>
             <Link to='/About'>about</Link>
             </div>
           </li>
-          <li className={classes.list} onClick={closeMenu}>
-          <div className={classes.nav_list_item}>
+          <li className={classeses.list}>
+          <div className={classeses.nav_list_item}>
             <Link to='/Project'>project</Link>
             </div>
           </li>
-          <li className={classes.list} onClick={closeMenu}>
-          <div className={classes.nav_list_item}>
+          <li className={classeses.list}>
+          <div className={classeses.nav_list_item}>
             <Link to='/Work'>Work</Link>
             </div>
           </li>
-          <li className={classes.list} onClick={closeMenu}>
-          <div className={classes.nav_list_item}>
+          <li className={classeses.list}>
+          <div className={classeses.nav_list_item}>
             <Link to='/Contact'>contact</Link>
             </div>
           </li>
         </ul>
-        {/* <ul className={classes.sign_up}>
-          <li className={classes.sign}>
-            <a href='#'>Sign-UP</a>
-            </li>
-          <li className={classes.sign}>
-            <a href='#'>Donate</a>
-          </li>
-        </ul> */}
-        <div className={classes.menu_icon} onClick={clickHandler}>
-          {click?
-          (<AiOutlineClose className={classes.menu} size='40px'/>)
-          :
-          (<AiOutlineMenu className={classes.menu} size='40px'/>)
-          }
-        </div>
-      </div>
-</div>
-  )
-}
+                </div>
+              )}
+            </Toolbar>
+          </AppBar>
+      </HideOnScroll>
 
+
+       {/* <Switch>
+         <Route exact path="/" component={Home} />
+         <Route path="/Work" component={Work} />
+         <Route path="/About" component={About} />
+         <Route path="/Project" component={Projects} />
+         <Route path="/Contact" component={Contact} />
+       </Switch> */}
+      {/* </Router> */}
+    </div>
+  );
+};
+
+export default Header;
 

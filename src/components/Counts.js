@@ -1,103 +1,168 @@
 import React from "react";
 import { Fade } from "react-awesome-reveal";
-import classes from '../css/FoundationStyles.module.css';
-import img1 from '../img/project.png';
-import img2 from '../img/volunteer.png';
-import img3 from '../img/donate.png';
-import img4 from '../img/marker.png';
-import img5 from '../img/teacher.png';
-import img6 from '../img/briefcase.png';
+import {
+  Card,
+  Grid,
+  Typography,
+  CardContent,
+  CardMedia,
+  CardActionArea,
+  CardActions,
+  Button,
+  Container,
+  Paper,
+} from "@material-ui/core";
+import classes from "../css/FoundationStyles.module.css";
+import './Slider_ani.css'
+import cx from "classnames";
+import img1 from "../img/svg/project.svg";
+import img2 from "../img/svg/volunteer.svg";
+import img3 from "../img/svg/donate.svg";
+import img4 from "../img/svg/marker.svg";
+import CountUp from "react-countup";
+import { makeStyles } from "@material-ui/core";
 
+const useclasses = makeStyles((theme) => ({
+  card:{
+    margin: '2rem 1rem',
+    borderRadius: '30px',
+    backgroundColor:'#f3f3f3',
+  },
+  countHeading:{
+    fontSize: 35,
+    [theme.breakpoints.up("xs")]: {
+        fontSize: 30,
+      },
+    [theme.breakpoints.up("sm")]: {
+      fontSize: 50,
+    },
+    [theme.breakpoints.up("md")]: {
+      fontSize: 40,
+    },
+    [theme.breakpoints.up("lg")]: {
+      fontSize: 50,
+    },
+  },
+countDiv:{
+  padding:'2rem',
+  backgroundColor:"#fff",
+},
+}));
 function Counts() {
-  const countValue= {
-    "project":"22 Projects",
-    "volunteers":"150 Volunteers",
-    "donees":"550 Donees",
-    "regions":"5 Regions",
-    "mentors":"50 Mentors",
-    "wip":"30 Work in Progress",
-  
-  }
+  const cs = useclasses()
   return (
-    <div className={classes.count_main_container}>
-      <Fade direction='down'>
-      <h1 className={classes.main_heading}>Reach</h1>
-      </Fade>
-      <ul className={classes.count_container}>
-        <Fade direction='left'>
-        <li className={classes.count_box}>
-          <div className={classes.number_div}>
-    
-              <img src={img1} alt='' className={classes.count_img}/>
+<div className={cs.countDiv}>
+  <Typography variant='h3' align='center' gutterBottom className={cs.countHeading} >
+    Our Reach
+  </Typography>
+        <Grid container  spacing={3} justify="center">
+          <Grid
+            item
+            xs={4}
+            sm={4}
+            md={3}
+            ig={3}
+            xl={2}  
+            component={Card}
+            className={cs.card}
+          >
       
-            <div className={classes.para_div}>
-              <h3 className={classes.count_para}>{countValue.project}</h3>
-            </div>
-          </div>
-        </li>
-        </Fade>
-        <Fade direction='down'>
-        <li className={classes.count_box}>
-          <div className={classes.number_div}>
+            <CardContent>
+              <Typography align='center' className={classes.heading} >
+              <img src={img1} alt="" className={classes.count_img} />
+              </Typography>
+              <Typography align='center' variant="h5" gutterBottom>
+                <CountUp start={0} end={974} duration={2.75} separator=","  />
+              </Typography>
 
-            <img src={img2} alt='' className={classes.count_img}/>
-        
-            <div className={classes.para_div}>
-              <h3 className={classes.count_para}>{countValue.volunteers}</h3>
-            </div>
-          </div>
-        </li>
-        </Fade>
-        <Fade direction='right'>
-        <li className={classes.count_box}>
-          <div className={classes.number_div}>
-        
-            <img src={img3} alt='' className={classes.count_img}/>
-         
-            <div className={classes.para_div}>
-              <h3 className={classes.count_para}>{countValue.donees}</h3>
-            </div>
-          </div>
-        </li>
-        </Fade>
-        <Fade direction='left'>
-        <li className={classes.count_box}>
-          <div className={classes.number_div}>
-   
-          <img src={img4} alt='' className={classes.count_img}/>
-            
-            <div className={classes.para_div}>
-              <h3 className={classes.count_para}>{countValue.regions}</h3>
-            </div>
-          </div>
-        </li>
-        </Fade>
-        <Fade direction='up'>
-        <li className={classes.count_box}>
-          <div className={classes.number_div}>
+              <Typography
+                className={classes.heading}
+                variant="body2"
+                align='center'
+              >
+                PROJECT
+              </Typography>
+            </CardContent>
+  
+          </Grid>
+          <Grid
+            item
+            xs={4}
+            sm={4}
+            md={3}
+            ig={3}
+            xl={2}
+            component={Card}
+            className={cs.card}          >
+            <CardContent>
+              <Typography align='center' className={classes.heading} >
+                <img src={img2} alt="" className={classes.count_img} />
+              </Typography>
+              <Typography align='center' variant="h5" gutterBottom>
+                <CountUp start={0} end={5555} duration={2.75} separator="," />
+              </Typography>
 
-          <img src={img5} alt='' className={classes.count_img}/>
-      
-            <div className={classes.para_div}>
-              <h3 className={classes.count_para}>{countValue.mentors}</h3>
-            </div>
-          </div>
-        </li>
-        </Fade>
-        <Fade direction='right'>
-        <li className={classes.count_box}>
-          <div className={classes.number_div}>
-         
-          <img src={img6} alt='' className={classes.count_img}/>
-       
-            <div className={classes.para_div}>
-              <h3 className={classes.count_para}>{countValue.wip}</h3>
-            </div>
-          </div>
-        </li>
-        </Fade>
-      </ul>
-    </div>
-  );
+              <Typography align='center' className={classes.heading} variant="body2">
+                volunteer
+              </Typography>
+            </CardContent>
+          </Grid>
+          <Grid
+            item
+            xs={4}
+            sm={4}
+            md={3}
+            ig={3}
+            xl={2}
+            component={Card}
+            className={cs.card}
+                      >
+            <CardContent>
+              <Typography align='center' className={classes.heading} >
+              <img src={img3} alt="" className={classes.count_img} />
+              </Typography>
+              <Typography align='center' variant="h5" gutterBottom>
+                <CountUp start={0} end={54254} duration={4.75} separator="," />
+              </Typography>
+
+              <Typography
+                className={classes.heading}
+                variant="body2"
+                align='center'
+              >
+                DONEES
+              </Typography>
+            </CardContent>
+          </Grid>
+          <Grid
+            item
+            xs={4}
+            sm={4}
+            md={3}
+            ig={2}
+            xl={2}
+            component={Card}
+            className={cs.card}          >
+            <CardContent>
+              <Typography align='center' className={classes.heading} >
+              <img src={img4} alt="" className={classes.count_img} />
+              </Typography>
+              <Typography align='center' variant="h5" gutterBottom>
+                <CountUp start={0} end={54254} duration={2.75} separator="," />
+              </Typography>
+
+              <Typography
+                className={classes.heading}
+                variant="body2"
+                align='center'
+              >
+                REGION
+              </Typography>
+            </CardContent>
+          </Grid>
+        </Grid>
+        </div>
+     );
 }
 export default Counts;
+

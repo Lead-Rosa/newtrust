@@ -8,11 +8,14 @@ import Contact from "./pages/Contact";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Projects from "./pages/Projects";
 import Footer from "./components/Footer";
-import MapContainer from './components/MapContainer'
+// import MapContainer from './components/MapContainer'
 import ScrollTop from "./components/ScrollTop";
+import { CssBaseline } from "@material-ui/core";
 
 function App() {
   return (
+    <>
+    <CssBaseline />
     <Router>
       <Header />
       <Switch>
@@ -21,12 +24,11 @@ function App() {
         <Route path="/About" component={About} />
         <Route path="/Project" component={Projects} />
         <Route path="/Contact" component={Contact} />
-       < Route path="/Map" component={MapContainer} />
       </Switch>
       <ScrollTop />
       <Footer />
     </Router>
-
+    </>
   );
 }
 
