@@ -7,7 +7,7 @@ import classes from "../css/FoundationStyles.module.css";
 import { BsArrowDown } from "react-icons/bs";
 import Reveal from "react-awesome-reveal";
 import { keyframes } from "@emotion/react";
-import img1 from "../img/imgs/pic1.jpg";
+import img1 from "../img/imgs/corona2.jpg";
 import img2 from "../img/imgs/pic2.jpg";
 import img3 from "../img/imgs/pic3.jpg";
 
@@ -38,7 +38,7 @@ const Slide = () => {
     {
       title: "Coronavirus Crisis Appeal",
       description:
-        "Support the most vulnerable and discriminated communities to survive this crisis.",
+        "Support the most discriminated communities to survive this crisis.",
       image: img1,
     },
     {
