@@ -59,7 +59,7 @@ const Slide = () => {
   const scroll = () => {
     // window.scrollTo({  top: 950, behavior: 'smooth'});
     window.scrollBy({
-      top: 950, // could be negative value
+      top: 740, // could be negative value
       left: 0,
       behavior: "smooth",
     });
