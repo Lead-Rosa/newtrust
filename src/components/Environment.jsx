@@ -80,7 +80,7 @@ const useclasses = makeStyles((theme) => ({
       fontSize: 40,
     },
     [theme.breakpoints.up("lg")]: {
-      fontSize: 50,
+      fontSize: 45,
     },
   },
   img:{

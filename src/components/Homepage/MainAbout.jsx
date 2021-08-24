@@ -20,7 +20,6 @@ const useclasses = makeStyles((theme) => ({
   },
   mainHeading: {
     marginTop: "1rem",
-    fontSize: 30,
     [theme.breakpoints.up("xs")]: {
       fontSize: 30,
     },
@@ -31,7 +30,7 @@ const useclasses = makeStyles((theme) => ({
       fontSize: 40,
     },
     [theme.breakpoints.up("lg")]: {
-      fontSize: 50,
+      fontSize: 45,
     },
   },
 }));

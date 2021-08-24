@@ -13,6 +13,8 @@ import per1 from "../img/per2.jpg";
 import per2 from "../img/per3.jpg";
 import per3 from "../img/per4.jpg";
 import per4 from "../img/per5.jpg";
+import { img,img1 } from "../components/compo";
+
 
 function Work() {
   useEffect(() => window.scrollTo(0, 0), []);
@@ -124,6 +126,8 @@ function Work() {
           </div>
         </div>
       </div>
+      <img src={img} alt="image" />
+      <img src={img1} alt="image" />
     </div>
   );
 }

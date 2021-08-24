@@ -7,12 +7,12 @@ import img1 from "../img/per4.jpg";
 import img2 from "../img/05.jpg";
 import image2 from "../img/imgs/pic2.jpg";
 import { ImQuotesLeft } from "react-icons/im";
-import per1 from '../img/per1.jpg'
-import per2 from '../img/per2.jpg'
-import per3 from '../img/per3.jpg'
-import per4 from '../img/per4.jpg'
-import per5 from '../img/per5.jpg'
-import per6 from '../img/per6.jpg'
+import per1 from "../img/per1.jpg";
+import per2 from "../img/per2.jpg";
+import per3 from "../img/per3.jpg";
+import per4 from "../img/per4.jpg";
+import per5 from "../img/per5.jpg";
+import per6 from "../img/per6.jpg";
 import inves from "../img/svg/investigate.svg";
 import change from "../img/svg/change.svg";
 import maintain from "../img/svg/maintain.svg";
@@ -27,7 +27,6 @@ import {
 } from "@material-ui/core";
 import { makeStyles, useTheme } from "@material-ui/core";
 import Sliderimg from "../components/Sliderimg";
-
 
 const useClasses = makeStyles((theme) => ({
   rootGrid: {
@@ -154,7 +153,7 @@ const profile = [
     f_name: "Marion",
     l_name: "Tyreman",
     email: "mtyreman1@businesswire.com",
-    image:per2,
+    image: per2,
   },
   {
     id: 3,
@@ -189,15 +188,13 @@ const profile = [
 function About() {
   const cs = useClasses();
   const theme = useTheme();
-  useEffect(() => window.scrollTo(0, 0), [] );
+  useEffect(() => window.scrollTo(0, 0), []);
   return (
     <div>
       <Sliderimg name="About" img={image2} />
       <div className={classes.about_quote}>
-        <h2>
-          <ImQuotesLeft className={classes.quote_img} size="4rem" />
-          Triumph over prejudice and ignorance is a triumph for us all.
-        </h2>
+        <ImQuotesLeft className={classes.quote_img} size="4rem" />
+        <h2>Triumph over prejudice and ignorance is a triumph for us all.</h2>
       </div>
       <div className={classes.ceo_container}>
         <div className={classes.about_container}>
@@ -272,9 +269,15 @@ function About() {
         <div className={classes.staff_container}>
           {profile.map((data) => (
             <div className={classes.staff_div} key={data.id}>
-              <img src={data.image} className={classes.staff_img} alt={data.f_name} />
+              <img
+                src={data.image}
+                className={classes.staff_img}
+                alt={data.f_name}
+              />
               <div className={classes.staff_detail}>
-                <h3 className={classes.staff_name}>{data.f_name} {data.l_name}</h3>
+                <h3 className={classes.staff_name}>
+                  {data.f_name} {data.l_name}
+                </h3>
                 <p className={classes.staff_desig}>{data.email}</p>
               </div>
             </div>

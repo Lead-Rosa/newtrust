@@ -1,57 +1,101 @@
+// import React from 'react'
+// import {useForm} from 'react-hook-form'
+
+// const Form = () => {
+//   const {register,handleSubmit } = useForm()
+//   const submitForm = data => {
+    
+//     console.log(data)
+//   }
+//   return (
+//     <div>
+//       <form onSubmit={handleSubmit(submitForm)}>
+//         <input type='text' name="name" {...register("name")} placeholder="Name" />
+
+//         <input type="text" name="email" {...register("email")} placeholder="email" />
+
+//         <input type="text" name="mobile" {...register("mobile")} placeholder="mobile" />
+//     <input type='submit' value='Submit' />
+//       </form>
+//     </div>
+//   )
+// }
+
+// export default Form
+
+
+
 import React from "react";
 import { useState, useEffect } from "react";
 import "../css/FormStyles.css";
 import classes from "../css/FoundationStyles.module.css";
+import { useForm } from "react-hook-form";
+import { yupResolver } from "@hookform/resolvers/yup";
+import * as yup from "yup";
+
+const schema = yup.object().shape({
+  name: yup.string().required("First Name should be required please"),
+  email: yup.string().email().required(),
+  mobile: yup.string().min(4).max(15).required(),
+  // confirmPassword: yup.string().oneOf([yup.ref("password"), null]),
+});
 
 function Form() {
-  const [values, setValues] = useState({});
-  const [errors, setErrors] = useState({});
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  let errmsg = {};
+  const { register, handleSubmit, errors } = useForm({
+    resolver: yupResolver(schema),
+  });
+console.log(errors)
+  const submitData = (data) => console.log(data);
+  // const { register, handleSubmit } = useForm({});
+  // const [values, setValues] = useState({});
+  // const [errrors, setErrrors] = useState({});
+  // const [isSubmitting, setIsSubmitting] = useState(false);
+  // let errmsg = {};
 
-  const handleChange = (e) => {
-    e.persist();
-    setValues((values) => ({
-      ...values,
-      [e.target.name]: e.target.value,
-    }));
-    if (!values.name)
-      setErrors((prevState) => ({ ...prevState, name: "Your Name" }));
-    else setErrors( delete errors.name);
-    if (!/\S+@\S+\.\S+/.test(values.email))
-      setErrors((prevState) => ({ ...prevState, email: "invalid email" }));
-    else setErrors( delete errors.email);
-    if (!values.number)
-      setErrors((prevState) => ({ ...prevState, number: "invalid number" }));
-    else setErrors(delete errors.number);
-    if (!values.message)
-      setErrors((prevState) => ({ ...prevState, message: "Address" }));
-    else setErrors(delete errors.message);
-  };
+  // // console.log(watch())
+  // const handleChange = (e) => {
+  //   e.persist();
+  //   setValues((values) => ({
+  //     values,
+  //     [e.target.name]: e.target.value,
+  //   }));
+  //   if (!values.name)
+  //     setErrrors((prevState) => ({ prevState, name: "Your Name" }));
+  //   else setErrrors(delete errrors.name);
+  //   if (!/\S+@\S+\.\S+/.test(values.email))
+  //     setErrrors((prevState) => ({ prevState, email: "invalid email" }));
+  //   else setErrrors(delete errrors.email);
+  //   if (!values.number)
+  //     setErrrors((prevState) => ({ prevState, number: "invalid number" }));
+  //   else setErrrors(delete errrors.number);
+  //   if (!values.message)
+  //     setErrrors((prevState) => ({ prevState, message: "Address" }));
+  //   else setErrrors(delete errrors.message);
+  // };
 
-useEffect(() => {
-    if (Object.keys(errors).length === 0 && isSubmitting) {
-      // console.log(values);
-      setValues("");
-      alert("Submitted Successfullly");
-    }
-  }, [errors]);
+  // useEffect(() => {
+  //   if (Object.keys(errrors).length === 0 && isSubmitting) {
+  //     // console.log(values);
+  //     setValues("");
+  //     alert("Submitted Successfullly");
+  //   }
+  // }, [errrors]);
 
-  // if(!values ) setIsSubmitting(false)
-// console.log(errors)
-  const handleSubmit = (e) => {
-    if (e) e.preventDefault();
-    setErrors(errmsg);
-    setIsSubmitting(true);
-    // alert(values);
-
-    // setValues("")
+  // if(!values ) setIsSubmitting(fa  lse)
+  // console.log(errrors)
+  // const handleSubmit = (e) => {
   //   if (e) e.preventDefault();
-  //   setErrors(errmsg);
-  //  if(!isSubmitting && values) alert("Submitted Successfullly");
-  //  else alert('ss')
-  };
+  //   setErrrors(errmsg);
+  //   setIsSubmitting(true);
+  //   // alert(values);
 
+  //   // setValues("")
+  //   //   if (e) e.preventDefault();
+  //   //   setErrrors(errmsg);
+  //   //  if(!isSubmitting && values) alert("Submitted Successfullly");
+  //   //  else alert('ss')
+  // };
+  // console.log("err", errors);
   return (
     <div>
       <section className="ftco-section">
@@ -61,6 +105,84 @@ useEffect(() => {
             <div className="col-md-12">
               <div className="row no-gutters">
                 <div className="col-lg-8 col-md-7 order-md-last d-flex align-items-stretch">
+                  <div className="contact-wrap w-100 p-md-5 p-4">
+                    <h3 className="mb-4">Get in touch</h3>
+                    <div id="form-message-warning" className="mb-4"></div>
+                    <div id="form-message-success" className="mb-4">
+                      Your message was sent, thank you!
+                    </div>
+                    <form
+                      // method="POST"
+                      // noValidate
+                      // autoComplete="off"
+                      onSubmit={handleSubmit(submitData)}
+                      id="contactForm"
+                      name="contactForm"
+                      className="contactForm"
+                    >
+                      <div className="row">
+                        <div className="col-md-6">
+                          <div className="form-group">
+                            <label className="label">Name</label>
+
+                            <input
+                              type="text"
+                              className="form-control"
+                              name="name"
+                              {...register("name")}
+                            />
+                        
+                          </div>
+                        </div>
+                        <div className="col-md-6">
+                          <div className="form-group">
+                            <label className="label" htmlFor="email">
+                              Email Address
+                            </label>
+                            <input
+                              className="form-control"
+                              id="email"
+                              name="email"
+                              {...register("email")}
+                            />
+                          </div>
+                        </div>
+                        <div className="col-md-12">
+                          <div className="form-group">
+                            <label className="label" htmlFor="mobile">
+                              Mobile
+                            </label>
+                            <input
+                              className="form-control"
+                              id="mobile"
+                              name="mobile"
+                              {...register("mobile")}
+                            />
+                          </div>
+                        </div>
+                        <div className="col-md-12">
+                          <div className="form-group">
+                            <label className="label" htmlFor="message">
+                              Message
+                            </label>
+                            <textarea className="form-control"></textarea>
+                          </div>
+                        </div>
+                        <div className="col-md-12">
+                          <div className="form-group">
+                            <input
+                              type="submit"
+                              value="Submit"
+                              className="btn btn-primary"
+                            />
+                            <div className="submitting"></div>
+                          </div>
+                        </div>
+                      </div>
+                    </form>
+                  </div>
+                </div>
+                {/* <div className="col-lg-8 col-md-7 order-md-last d-flex align-items-stretch">
                   <div className="contact-wrap w-100 p-md-5 p-4">
                     <h3 className="mb-4">Get in touch</h3>
                     <div id="form-message-warning" className="mb-4"></div>
@@ -78,9 +200,10 @@ useEffect(() => {
                       <div className="row">
                         <div className="col-md-6">
                           <div className="form-group">
-                            <label className="label" for="name">
+                            <label className="label" htmlFor="name">
                               Name
                             </label>
+                          
                             <input
                               type="text"
                               className="form-control"
@@ -92,22 +215,14 @@ useEffect(() => {
                               required
                               id="name"
                             />
-                            {/* <input
-                              type="text"
-                              className="form-control"
-                              onChange={(e)=>setFirstName(e.target.value)}
-                              value={firstName}
-                              id="name"
-                            />
-                            <h1>{firstName}</h1> */}
-                            {errors.name && (
-                              <p className={classes.errMsg}>{errors.name}</p>
+                            {errrors.name && (
+                              <p className={classes.errMsg}>{errrors.name}</p>
                             )}
                           </div>
                         </div>
                         <div className="col-md-6">
                           <div className="form-group">
-                            <label className="label" for="email">
+                            <label className="label" htmlFor="email">
                               Email Address
                             </label>
                             <input
@@ -121,14 +236,14 @@ useEffect(() => {
                               value={values.email}
                               required
                             />
-                            {errors.email && (
-                              <p className={classes.errMsg}>{errors.email}</p>
+                            {errrors.email && (
+                              <p className={classes.errMsg}>{errrors.email}</p>
                             )}
                           </div>
                         </div>
                         <div className="col-md-12">
                           <div className="form-group">
-                            <label className="label" for="subject">
+                            <label className="label" htmlFor="subject">
                               Mobile
                             </label>
                             <input
@@ -140,14 +255,14 @@ useEffect(() => {
                               value={values.number || ""}
                               required
                             />
-                            {errors.number && (
-                              <p className={classes.errMsg}>{errors.number}</p>
+                            {errrors.number && (
+                              <p className={classes.errMsg}>{errrors.number}</p>
                             )}
                           </div>
                         </div>
                         <div className="col-md-12">
                           <div className="form-group">
-                            <label className="label" for="#">
+                            <label className="label" htmlFor="#">
                               Message
                             </label>
                             <textarea
@@ -162,8 +277,8 @@ useEffect(() => {
                               value={values.address}
                               noRequired
                             ></textarea>
-                            {errors.address && (
-                              <p className={classes.errMsg}>{errors.address}</p>
+                            {errrors.address && (
+                              <p className={classes.errMsg}>{errrors.address}</p>
                             )}
                           </div>
                         </div>
@@ -171,7 +286,7 @@ useEffect(() => {
                           <div className="form-group">
                             <input
                               type="submit"
-                              value="Send Message"
+                              value="Submit"
                               className="btn btn-primary"
                             />
                             <div className="submitting"></div>
@@ -180,7 +295,7 @@ useEffect(() => {
                       </div>
                     </form>
                   </div>
-                </div>
+                </div> */}
                 <div className="col-lg-4 col-md-5 d-flex align-items-stretch">
                   <div className="info-wrap bg-primary w-100 p-md-5 p-4">
                     <h3>Let's get in touch</h3>
@@ -245,63 +360,62 @@ useEffect(() => {
 
 export default Form;
 
-// import React, { useState } from "react";
-// import validator from 'validator'
+// // import React, { useState } from "react";
+// // import validator from 'validator'
 
-// const App = () => {
+// // const App = () => {
 
-//   const [emailError, setEmailError] = useState('')
-//   const validateEmail = (e) => {
-//     var email = e.target.value
-//     console.log(email)
+// //   const [emailError, setEmailError] = useState('')
+// //   const validateEmail = (e) => {
+// //     var email = e.target.value
+// //     console.log(email)
 
-//     if (validator.isEmail(email)) {
-//       setEmailError('Valid Email :)')
-//     } else {
-//       setEmailError('Enter valid Email!')
-//     }
-//   }
-//   return (
-//     <div style={{
-//       margin: 'auto',
-//       marginLeft: '300px',
-//     }}>
-//       <pre>
-//         <h2>Validating Email in ReactJS</h2>
-//         <span>Enter Email: </span><input type="text" id="userEmail"
-//         onChange={(e) => validateEmail(e)}></input> <br />
-//         <span style={{
-//           fontWeight: 'bold',
-//           color: 'red',
-//         }}>{emailError}</span>
-//       </pre>
-//     </div>
-//   );
-// }
+// //     if (validator.isEmail(email)) {
+// //       setEmailError('Valid Email :)')
+// //     } else {
+// //       setEmailError('Enter valid Email!')
+// //     }
+// //   }
+// //   return (
+// //     <div style={{
+// //       margin: 'auto',
+// //       marginLeft: '300px',
+// //     }}>
+// //       <pre>
+// //         <h2>Validating Email in ReactJS</h2>
+// //         <span>Enter Email: </span><input type="text" id="userEmail"
+// //         onChange={(e) => validateEmail(e)}></input> <br />
+// //         <span style={{
+// //           fontWeight: 'bold',
+// //           color: 'red',
+// //         }}>{emailError}</span>
+// //       </pre>
+// //     </div>
+// //   );
+// // }
 
-// export default App
+// // export default App
 
+// // import * as React from "react";
+// // import { useForm } from "react-hook-form";
 
-// import * as React from "react";
-// import { useForm } from "react-hook-form";
+// // export default function App() {
+// //   const { register, handleSubmit } = useForm();
+// //   const onSubmit = (data) => console.log(data);
 
-// export default function App() {
-//   const { register, handleSubmit } = useForm();
-//   const onSubmit = (data) => console.log(data);
+// //   return (
+// //     <form onSubmit={handleSubmit(onSubmit)}>
+// //       <input {register("firstName", { required: true })} placeholder="First name" />
 
-//   return (
-//     <form onSubmit={handleSubmit(onSubmit)}>
-//       <input {...register("firstName", { required: true })} placeholder="First name" />
+// //       <input {register("lastName", { minLength: 2 })} placeholder="Last name" />
 
-//       <input {...register("lastName", { minLength: 2 })} placeholder="Last name" />
+// //       <select {register("category")}>
+// //         <option value="">Select</option>
+// //         <option value="A">Category A</option>
+// //         <option value="B">Category B</option>
+// //       </select>
 
-//       <select {...register("category")}>
-//         <option value="">Select...</option>
-//         <option value="A">Category A</option>
-//         <option value="B">Category B</option>
-//       </select>
-
-//       <input type="submit" />
-//     </form>
-//   );
-// }
+// //       <input type="submit" />
+// //     </form>
+// //   );
+// // }
