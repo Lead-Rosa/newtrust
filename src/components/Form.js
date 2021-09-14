@@ -4,7 +4,7 @@
 // const Form = () => {
 //   const {register,handleSubmit } = useForm()
 //   const submitForm = data => {
-    
+
 //     console.log(data)
 //   }
 //   return (
@@ -22,8 +22,6 @@
 // }
 
 // export default Form
-
-
 
 import React from "react";
 import { useState, useEffect } from "react";
@@ -44,58 +42,9 @@ function Form() {
   const { register, handleSubmit, errors } = useForm({
     resolver: yupResolver(schema),
   });
-console.log(errors)
+  console.log(errors);
   const submitData = (data) => console.log(data);
-  // const { register, handleSubmit } = useForm({});
-  // const [values, setValues] = useState({});
-  // const [errrors, setErrrors] = useState({});
-  // const [isSubmitting, setIsSubmitting] = useState(false);
-  // let errmsg = {};
 
-  // // console.log(watch())
-  // const handleChange = (e) => {
-  //   e.persist();
-  //   setValues((values) => ({
-  //     values,
-  //     [e.target.name]: e.target.value,
-  //   }));
-  //   if (!values.name)
-  //     setErrrors((prevState) => ({ prevState, name: "Your Name" }));
-  //   else setErrrors(delete errrors.name);
-  //   if (!/\S+@\S+\.\S+/.test(values.email))
-  //     setErrrors((prevState) => ({ prevState, email: "invalid email" }));
-  //   else setErrrors(delete errrors.email);
-  //   if (!values.number)
-  //     setErrrors((prevState) => ({ prevState, number: "invalid number" }));
-  //   else setErrrors(delete errrors.number);
-  //   if (!values.message)
-  //     setErrrors((prevState) => ({ prevState, message: "Address" }));
-  //   else setErrrors(delete errrors.message);
-  // };
-
-  // useEffect(() => {
-  //   if (Object.keys(errrors).length === 0 && isSubmitting) {
-  //     // console.log(values);
-  //     setValues("");
-  //     alert("Submitted Successfullly");
-  //   }
-  // }, [errrors]);
-
-  // if(!values ) setIsSubmitting(fa  lse)
-  // console.log(errrors)
-  // const handleSubmit = (e) => {
-  //   if (e) e.preventDefault();
-  //   setErrrors(errmsg);
-  //   setIsSubmitting(true);
-  //   // alert(values);
-
-  //   // setValues("")
-  //   //   if (e) e.preventDefault();
-  //   //   setErrrors(errmsg);
-  //   //  if(!isSubmitting && values) alert("Submitted Successfullly");
-  //   //  else alert('ss')
-  // };
-  // console.log("err", errors);
   return (
     <div>
       <section className="ftco-section">
@@ -131,7 +80,6 @@ console.log(errors)
                               name="name"
                               {...register("name")}
                             />
-                        
                           </div>
                         </div>
                         <div className="col-md-6">
@@ -182,120 +130,7 @@ console.log(errors)
                     </form>
                   </div>
                 </div>
-                {/* <div className="col-lg-8 col-md-7 order-md-last d-flex align-items-stretch">
-                  <div className="contact-wrap w-100 p-md-5 p-4">
-                    <h3 className="mb-4">Get in touch</h3>
-                    <div id="form-message-warning" className="mb-4"></div>
-                    <div id="form-message-success" className="mb-4">
-                      Your message was sent, thank you!
-                    </div>
-                    <form
-                      method="POST"
-                      noValidate
-                      onSubmit={handleSubmit}
-                      id="contactForm"
-                      name="contactForm"
-                      className="contactForm"
-                    >
-                      <div className="row">
-                        <div className="col-md-6">
-                          <div className="form-group">
-                            <label className="label" htmlFor="name">
-                              Name
-                            </label>
-                          
-                            <input
-                              type="text"
-                              className="form-control"
-                              autoComplete="off"
-                              name="name"
-                              placeholder="Ak"
-                              value={values.name || ""}
-                              onChange={handleChange}
-                              required
-                              id="name"
-                            />
-                            {errrors.name && (
-                              <p className={classes.errMsg}>{errrors.name}</p>
-                            )}
-                          </div>
-                        </div>
-                        <div className="col-md-6">
-                          <div className="form-group">
-                            <label className="label" htmlFor="email">
-                              Email Address
-                            </label>
-                            <input
-                              type="email"
-                              className="form-control"
-                              name="email"
-                              id="email"
-                              autoComplete="off"
-                              placeholder="aka@gmail.in"
-                              onChange={handleChange}
-                              value={values.email}
-                              required
-                            />
-                            {errrors.email && (
-                              <p className={classes.errMsg}>{errrors.email}</p>
-                            )}
-                          </div>
-                        </div>
-                        <div className="col-md-12">
-                          <div className="form-group">
-                            <label className="label" htmlFor="subject">
-                              Mobile
-                            </label>
-                            <input
-                              type="text"
-                              name="number"
-                              className="form-control"
-                              placeholder="90922222222"
-                              onChange={handleChange}
-                              value={values.number || ""}
-                              required
-                            />
-                            {errrors.number && (
-                              <p className={classes.errMsg}>{errrors.number}</p>
-                            )}
-                          </div>
-                        </div>
-                        <div className="col-md-12">
-                          <div className="form-group">
-                            <label className="label" htmlFor="#">
-                              Message
-                            </label>
-                            <textarea
-                              type="text"
-                              name="message"
-                              className="form-control"
-                              id="message"
-                              cols="30"
-                              rows="4"
-                              placeholder="Address"
-                              // onChange={handleChange}
-                              value={values.address}
-                              noRequired
-                            ></textarea>
-                            {errrors.address && (
-                              <p className={classes.errMsg}>{errrors.address}</p>
-                            )}
-                          </div>
-                        </div>
-                        <div className="col-md-12">
-                          <div className="form-group">
-                            <input
-                              type="submit"
-                              value="Submit"
-                              className="btn btn-primary"
-                            />
-                            <div className="submitting"></div>
-                          </div>
-                        </div>
-                      </div>
-                    </form>
-                  </div>
-                </div> */}
+
                 <div className="col-lg-4 col-md-5 d-flex align-items-stretch">
                   <div className="info-wrap bg-primary w-100 p-md-5 p-4">
                     <h3>Let's get in touch</h3>

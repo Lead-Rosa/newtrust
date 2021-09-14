@@ -1,7 +1,4 @@
-import React, { Component } from "react";
-import { Fade } from "react-awesome-reveal";
-import Slider from "react-slick";
-import classes from "../css/FoundationStyles.module.css";
+import React from "react";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import "../css/card.css";
@@ -13,10 +10,7 @@ import {
   CardActionArea,
   Grid,
 } from "@material-ui/core";
-import img1 from "../img/image5.jpg";
-import image1 from "../img/imgs/recent1.png";
-import image2 from "../img/imgs/recent2.jpg";
-import image3 from "../img/imgs/recent3.jpg";
+import { card1, card2, card3 } from "../asset/images";
 import { makeStyles } from "@material-ui/core";
 
 const useclasses = makeStyles((theme) => ({
@@ -45,8 +39,8 @@ const useclasses = makeStyles((theme) => ({
   cardContent: {
     height: "230px",
   },
-  cardTitle:{
-    color:'#1a74fc',
+  cardTitle: {
+    color: "#1a74fc",
   },
 }));
 
@@ -55,7 +49,7 @@ const Cards = () => {
   const card = [
     {
       id: 1,
-      image: image1,
+      image: card1,
       location: "chennai",
       cardHeading: "Educate the Uneducated",
       description:
@@ -63,7 +57,7 @@ const Cards = () => {
     },
     {
       id: 2,
-      image: image2,
+      image: card2,
       location: "chennai",
       cardHeading: "Spreading the joy of reading in  pandemic",
       description:
@@ -71,7 +65,7 @@ const Cards = () => {
     },
     {
       id: 3,
-      image: image3,
+      image: card3,
       location: "chennai",
       cardHeading: "Reclaiming the lost crops",
       description:
@@ -120,7 +114,12 @@ const Cards = () => {
                 />
 
                 <CardContent className={classes.cardContent}>
-                  <Typography gutterBottom className={classes.cardTitle} variant="h5" component="div">
+                  <Typography
+                    gutterBottom
+                    className={classes.cardTitle}
+                    variant="h5"
+                    component="div"
+                  >
                     {cardValue.cardHeading}
                   </Typography>
                   <Typography variant="body2" gutterBottom>

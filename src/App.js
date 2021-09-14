@@ -19,7 +19,7 @@ function App() {
     <Router>
       <Header />
       <Switch>
-        <Route exact path="/" component={Home} />
+        <Route exact path="/"  component={Home} />
         <Route path="/Work" component={Work} />
         <Route path="/About" component={About} />
         <Route path="/Project" component={Projects} />

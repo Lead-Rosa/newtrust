@@ -92,7 +92,6 @@ header section a {
 .nextButton {
   position: absolute;
   top: 50%;
-
   transform: translateY(-50%);
   z-index: 1;
 transition: all .1s ease-in;

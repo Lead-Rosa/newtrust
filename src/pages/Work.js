@@ -2,19 +2,17 @@ import React from "react";
 import classes from "../css/FoundationStyles.module.css";
 import { useEffect } from "react";
 import Sliderimg from "../components/Sliderimg";
-// import "../css/work.css";
-import image1 from "../img/img1.jpg";
-import image from "../img/imgs/pic4.jpg";
-import cancer from "../img/cancer.jpeg";
-import women1 from "../img/women1.jpg";
-import women from "../img/women2.jpg";
-import team from "../img/team.jpg";
-import per1 from "../img/per2.jpg";
-import per2 from "../img/per3.jpg";
-import per3 from "../img/per4.jpg";
-import per4 from "../img/per5.jpg";
-import { img,img1 } from "../components/compo";
-
+import {
+  cancer,
+  team,
+  women,
+  women1,
+  work1,
+  work2,
+  work3,
+  work4,
+  workslideimg,
+} from "../asset/images";
 
 function Work() {
   useEffect(() => window.scrollTo(0, 0), []);
@@ -22,7 +20,7 @@ function Work() {
     <div className={classes.about_main_div}>
       <Sliderimg
         name="Work"
-        img={image}
+        img={workslideimg}
         cont="Lorem Ipsum is simply dummy text of the printing and typesetting
               industry Lorem Ipsum has content of a page when looking at its
               layout."
@@ -101,33 +99,31 @@ function Work() {
         </div>
         <div className={classes.sub_img}>
           <div className={classes.img_div}>
-            <img src={per1} className={classes.star_img} alt="" />
+            <img src={work1} className={classes.star_img} alt="" />
             <div className={classes.text}>
               <h2>Moria Lubomirski</h2>
             </div>
           </div>
           <div className={classes.img_div}>
-            <img src={per2} className={classes.star_img} alt="" />
+            <img src={work2} className={classes.star_img} alt="" />
             <div className={classes.text}>
               <h2>Marion Tyreman</h2>
             </div>
           </div>
           <div className={classes.img_div}>
-            <img src={per3} className={classes.star_img} alt="" />
+            <img src={work3} className={classes.star_img} alt="" />
             <div className={classes.text}>
               <h2>Zulema Brookzie</h2>
             </div>
           </div>
           <div className={classes.img_div}>
-            <img src={per4} className={classes.star_img} alt="" />
+            <img src={work4} className={classes.star_img} alt="" />
             <div className={classes.text}>
               <h2>Leonard Sirr</h2>
             </div>
           </div>
         </div>
       </div>
-      <img src={img} alt="image" />
-      <img src={img1} alt="image" />
     </div>
   );
 }

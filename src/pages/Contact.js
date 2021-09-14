@@ -1,14 +1,13 @@
 import React from "react";
-import Sliderimg from "../components/Sliderimg";
-import image from "../img/imgs/pic5.jpg";
-
+import Sliderimg from '../components/Sliderimg'
+import { slideimg } from '../asset/images'
 import Form from "../components/Form";
 import classes from "../css/FoundationStyles.module.css";
 
 function Contact() {
   return (
     <>
-      <Sliderimg name="Stay in Touch with us" img={image} />
+      <Sliderimg name="Stay in Touch with us" img={slideimg} />
      
         
       <Form />

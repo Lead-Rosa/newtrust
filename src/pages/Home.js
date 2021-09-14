@@ -12,7 +12,6 @@ function Home() {
   useEffect(()=> window.scrollTo(0,0),[]);
   return (
     <div className={classes.home_main_div}>
-{/* <div className={classes.toolbar} /> */}
       <Main />
       <Cards />
       <Counts />

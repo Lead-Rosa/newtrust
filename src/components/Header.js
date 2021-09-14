@@ -9,33 +9,22 @@ import {
   Button,
   useScrollTrigger,
   Slide,
-  Card,
-  Menu,
-  MenuItem,
-  Paper,
   ListItemIcon,
   Divider,
   List,
   ListItem,
   ListItemText,
   Drawer,
-  Container,
-  Box,
+  makeStyles,
+  useTheme,
 } from "@material-ui/core";
 import { ThemeProvider, createTheme } from "@material-ui/core/styles";
-import classeses from "../css/FoundationStyles.module.css";
 import { Link } from "react-router-dom";
-import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
-import { makeStyles, useTheme } from "@material-ui/core/";
 
 // IMPORTING ICONS
 import MenuIcon from "@material-ui/icons/Menu";
-import { AiOutlineHome, AiOutlineFundProjectionScreen } from "react-icons/ai";
-import { RiMedalLine } from "react-icons/ri";
-import { GrContactInfo } from "react-icons/gr";
 
 // LOCAL-STYLING
-
 const useStyles = makeStyles((theme) => ({
   root: {
     flexGrow: 1,
@@ -50,7 +39,7 @@ const useStyles = makeStyles((theme) => ({
     marginRight: theme.spacing(1),
   },
   title: {},
-  toolBar: { display: "flex" ,justifyContent:'space-between'},
+  toolBar: { display: "flex", justifyContent: "space-between" },
   drawerWidth: {
     width: 250,
   },
@@ -117,6 +106,7 @@ const Header = (props) => {
       fontFamily: ["Poppins", "Arial", "sans-serif"].join(","),
     },
   });
+
   return (
     <div className={classes.root}>
       <ThemeProvider theme={Theme}>
@@ -199,7 +189,7 @@ const Header = (props) => {
                           </ListItemIcon>
                           <ListItemText primary="Work" />
                         </ListItem>
-                  
+
                         <ListItem
                           button
                           onClick={toggleDrawer}
@@ -217,39 +207,13 @@ const Header = (props) => {
                   </Drawer>
                 </div>
               ) : (
-                //          <ul className={classeses.nav_list }>
-                // <li className={classeses.list}>
-                //   <div className={classeses.nav_list_item}>
-                //     <Link to='/'>home</Link>
-                //     </div>
-                //   </li>
-                //   <li className={classeses.list}>
-                //   <div className={classeses.nav_list_item}>
-                //     <Link to='/About'>about</Link>
-                //     </div>
-                //   </li>
-                //   <li className={classeses.list}>
-                //   <div className={classeses.nav_list_item}>
-                //     <Link to='/Project'>project</Link>
-                //     </div>
-                //   </li>
-                //   <li className={classeses.list}>
-                //   <div className={classeses.nav_list_item}>
-                //     <Link to='/Work'>Work</Link>
-                //     </div>
-                //   </li>
-                //   <li className={classeses.list}>
-                //   <div className={classeses.nav_list_item}>
-                //     <Link to='/Contact'>contact</Link>
-                //     </div>
-                //   </li>
-                // </ul>
                 <div className={classes.buttonContainer}>
                   <Button
                     component={Link}
                     to="/"
                     className={classes.button}
                     color="primary"
+                    disableRipple
                   >
                     <Typography className={classes.btnTxt} variant="h6">
                       Home
@@ -259,6 +223,7 @@ const Header = (props) => {
                     component={Link}
                     to="/About"
                     className={classes.button}
+                    disableRipple
                   >
                     <Typography className={classes.btnTxt} variant="h6">
                       About
@@ -268,6 +233,7 @@ const Header = (props) => {
                     component={Link}
                     to="/Project"
                     className={classes.button}
+                    disableRipple
                   >
                     <Typography className={classes.btnTxt} variant="h6">
                       Project
@@ -277,12 +243,14 @@ const Header = (props) => {
                     component={Link}
                     to="/Work"
                     className={classes.button}
+                    disableRipple
                   >
                     <Typography className={classes.btnTxt} variant="h6">
                       Work
                     </Typography>
                   </Button>
                   <Button
+                    disableRipple
                     component={Link}
                     to="/Contact"
                     className={classes.button}
@@ -291,42 +259,6 @@ const Header = (props) => {
                       Contact
                     </Typography>
                   </Button>
-                  {/* <Box
-                    display="flex"
-                    justifyContent="flex-end"
-                    p={1}
-                    m={1}
-                    className={classes.container}
-                  >
-                    <Box p={1}>
-                      <Button className={classes.button} color="primary">
-                        <Typography className={classes.btnTxt} variant="h6">
-                          Home
-                        </Typography>
-                      </Button>
-                    </Box>
-                    <Box p={1}>
-                      <Button className={classes.button}>
-                        <Typography className={classes.btnTxt} variant="h6">
-                          Project
-                        </Typography>
-                      </Button>
-                    </Box>
-                    <Box p={1}>
-                      <Button className={classes.button}>
-                        <Typography className={classes.btnTxt} variant="h6">
-                          Work
-                        </Typography>
-                      </Button>
-                    </Box>
-                    <Box p={1}>
-                      <Button className={classes.button}>
-                        <Typography className={classes.btnTxt} variant="h6">
-                          Contact
-                        </Typography>
-                      </Button>
-                    </Box>
-                  </Box> */}
                 </div>
               )}
             </Toolbar>

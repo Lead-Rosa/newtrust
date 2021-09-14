@@ -2,30 +2,29 @@ import React, { Profiler } from "react";
 import { useEffect } from "react";
 import classes from "../css/FoundationStyles.module.css";
 import { Fade } from "react-awesome-reveal";
-import image1 from "../img/img1.jpg";
-import img1 from "../img/per4.jpg";
-import img2 from "../img/05.jpg";
-import image2 from "../img/imgs/pic2.jpg";
 import { ImQuotesLeft } from "react-icons/im";
-import per1 from "../img/per1.jpg";
-import per2 from "../img/per2.jpg";
-import per3 from "../img/per3.jpg";
-import per4 from "../img/per4.jpg";
-import per5 from "../img/per5.jpg";
-import per6 from "../img/per6.jpg";
-import inves from "../img/svg/investigate.svg";
-import change from "../img/svg/change.svg";
-import maintain from "../img/svg/maintain.svg";
+import {
+  ceoimg,
+  st1,
+  st2,
+  st3,
+  st4,
+  st5,
+  st6,
+  inveset,
+  change,
+  maintain,
+  slideimg,
+} from "../asset/images";
 import {
   Grid,
-  Card,
   Paper,
   CardMedia,
   CardContent,
   Typography,
-  CardActionArea,
+  makeStyles,
+  useTheme,
 } from "@material-ui/core";
-import { makeStyles, useTheme } from "@material-ui/core";
 import Sliderimg from "../components/Sliderimg";
 
 const useClasses = makeStyles((theme) => ({
@@ -99,7 +98,7 @@ const whatweDo = [
   {
     id: 1,
     title: "Investigate",
-    image: inves,
+    image: inveset,
     desc: "Contrary to popular belief, Lorem Ipsum is not simplyrandom text. It has roots Contrary to popular belief,Lorem Ipsum is not simply random text. It has rootsContrary to popular belief, Lorem Ipsum is not simplyrandom text. It has roots",
   },
   {
@@ -116,72 +115,48 @@ const whatweDo = [
   },
 ];
 
-const values = [
-  {
-    id: 1,
-    ima: img2,
-    name: "akash",
-    desig: "dev",
-    para: "lorem iumndf wssfbf sdswerfiourf fruhiwewfuhsaa  rss wwk  ww w werfh",
-  },
-  {
-    id: 2,
-    ima: img2,
-    name: "rr",
-    desig: "Salesforce",
-    para: "lorem iumndf wssfbf sdswerfiourf fruhiwewfuhsaa  rss wwk  ww w werfh",
-  },
-  {
-    id: 3,
-    ima: img2,
-    name: "ak",
-    desig: "se",
-    para: "lorem iumndf wssfbf sdswerfiourf fruhiwewfuhsaa  rss wwk  ww w werfh",
-  },
-];
-
 const profile = [
   {
     id: 1,
     f_name: "Moria",
     l_name: "Lubomirski",
     email: "mlubomirski0@latimes.com",
-    image: per1,
+    image: st1,
   },
   {
     id: 2,
     f_name: "Marion",
     l_name: "Tyreman",
     email: "mtyreman1@businesswire.com",
-    image: per2,
+    image: st2,
   },
   {
     id: 3,
     f_name: "Zulema",
     l_name: "Brookzie",
     email: "zbrookzie2@netscape.com",
-    image: per3,
+    image: st3,
   },
   {
     id: 4,
     f_name: "Sonya",
     l_name: "Minter",
     email: "sminter3@engadget.com",
-    image: per4,
+    image: st4,
   },
   {
     id: 5,
     f_name: "Leonard",
     l_name: "Sirr",
     email: "lsirr4@bandcamp.com",
-    image: per5,
+    image: st5,
   },
   {
     id: 6,
     f_name: "Ned",
     l_name: "Fifoot",
     email: "nfifoot5@bluehost.com",
-    image: per6,
+    image: st6,
   },
 ];
 
@@ -191,7 +166,7 @@ function About() {
   useEffect(() => window.scrollTo(0, 0), []);
   return (
     <div>
-      <Sliderimg name="About" img={image2} />
+      <Sliderimg name="About" img={slideimg} />
       <div className={classes.about_quote}>
         <ImQuotesLeft className={classes.quote_img} size="4rem" />
         <h2>Triumph over prejudice and ignorance is a triumph for us all.</h2>
@@ -200,7 +175,7 @@ function About() {
         <div className={classes.about_container}>
           <div className={classes.ceo_img}>
             <Fade triggerOnce direction="left">
-              <img src={img1} className={classes.ceo_img} alt="" />
+              <img src={ceoimg} className={classes.ceo_img} alt="" />
             </Fade>
           </div>
           <Fade triggerOnce direction="right">

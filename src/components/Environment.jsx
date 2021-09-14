@@ -3,6 +3,7 @@ import classes from "../css/FoundationStyles.module.css";
 import image1 from "../img/svg/work2.jpg";
 import {Card, CardMedia, Grid, Typography } from "@material-ui/core";
 import "../css/envi.css";
+
 import { makeStyles } from "@material-ui/core";
 
 const useclasses = makeStyles((theme) => ({
@@ -98,7 +99,7 @@ const Environment = () => {
         What we Done
       </Typography>
       {/* <div className={classes.sec_maindiv}> */}
-        <Grid container justify="center" spacing={0}>
+        <Grid container justify="center" spacing={5}>
           <Grid
             item
             xs={15}

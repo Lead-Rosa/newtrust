@@ -1,18 +1,16 @@
 import React from "react";
 import { useEffect } from "react";
+import { childedu, health, medicine, projectslideimage } from "../asset/images";
 import Sliderimg from "../components/Sliderimg";
 import classes from '../css/FoundationStyles.module.css';
 import "../css/project.css";
-import image from '../img/imgs/pic3.jpg'
-import health from "../img/villagehealth.webp";
-import medicine from "../img/medicine.jpg";
-import childedu from "../img/childedu.jpg";
+
 
 function Projects() {
   useEffect(()=> window.scrollTo(0,0),[]);
   return (
     <div >
-<Sliderimg name="Project" img={image} cont="Lorem Ipsum is simply dummy text of the printing and typesetting
+<Sliderimg name="Project" img={projectslideimage} cont="Lorem Ipsum is simply dummy text of the printing and typesetting
               industry Lorem Ipsum has content of a page when looking at its
               layout."/>
       <div className={classes.div_main_container}>
